@@ -1,6 +1,6 @@
 ---
 title: About
-image: profile.jpg
+image: headshot.jpg
 about:
   template: jolla
 ---
