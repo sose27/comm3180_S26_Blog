@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi, I’m Sose and I’m a senior at Penn’s Annenberg School, majoring in Communication with a concentration in data and network science. I also have minors in consumer psychology and history and plan on a career in corporate communications and marketing. I’m excited to show off what I’ve learned in my COMM data and network science classes thus far in the blog posts below!"
+    "text": "Hi, I’m Sose and I’m a senior at Penn’s Annenberg School, majoring in Communication with a concentration in data and network science. I also have minors in consumer psychology and history and plan on a career in corporate communications and marketing. I’m excited to show off what I’ve learned in my COMM data and network science classes thus far in the blog posts below! Woohoo!"
   },
   {
     "objectID": "index.html",
@@ -26,5 +26,12 @@
     "title": "A test post",
     "section": "Stories from data",
     "text": "Stories from data\n\nLet’s set up some data\n\n\nx = ['A', 'B', 'C']\ny = [1, 5, 3]\n\n\nNow let’s visualize it\n\nplt.bar(x, y)\nplt.show()"
+  },
+  {
+    "objectID": "posts/000_test_post/index.html#this-is-my-first-post-so-dont-be-too-harsh-just-kidding",
+    "href": "posts/000_test_post/index.html#this-is-my-first-post-so-dont-be-too-harsh-just-kidding",
+    "title": "A test post",
+    "section": "This is my first post, so don’t be too harsh (just kidding ;) ) !",
+    "text": "This is my first post, so don’t be too harsh (just kidding ;) ) !"
   }
 ]
