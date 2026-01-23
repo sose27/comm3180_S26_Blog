@@ -5,4 +5,4 @@ about:
   template: jolla
 ---
 
-Hi, I'm Sose and I'm a senior at Penn's Annenberg School, majoring in Communication with a concentration in data and network science. I also have minors in consumer psychology and history and plan on a career in corporate communications and marketing. I'm excited to show off what I've learned in my COMM data and network science classes thus far in the blog posts below! 
+Hi, I'm Sose and I'm a senior at the University of Pennsylvania, majoring in Communication with a concentration in data and network science. I also have minors in consumer psychology and history and plan on a career in corporate communications and marketing. I'm excited to show off what I've learned in my COMM data and network science classes thus far in the blog posts below! 

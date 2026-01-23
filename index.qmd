@@ -1,5 +1,5 @@
 ---
-title: My Data Stories
+title: Data Stories: Programming Journalism
 listing:
   contents: posts
   sort: date desc
