@@ -10,7 +10,7 @@ website:
         href: https://github.com/
 format:
   html:
-    theme: morph
+    theme: solar
     css: styles.css
 
 execute:
