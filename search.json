@@ -39,7 +39,7 @@
     "href": "posts/001_First_post/Untitled.html",
     "title": "An introduction",
     "section": "",
-    "text": "---\ntitle: \"My first post!\"\ndescription: \"The beginning of our data-driven storytelling\"\nauthor: \"Sose Hovannisian\"\ndate: \"1/24/2026\"\ncategories:\n  - Learning\n  - data stories\n---\n\n\n  Cell In[1], line 1\n    ---\n       ^\nSyntaxError: invalid syntax\nHey everyone - Sose here! Welcome to my blog! Here I will be documenting a number of stories told by data. I am super interested in journalism and this is my first time engaging with data-driven storytelling. Buckle up for the ride ahead!"
+    "text": "---\ntitle: \"My first post\"\ndescription: \"The Beginning our of Data-driven Storytelling\"\nauthor: \"Sose Hovannisian\"\ndate: \"1/24/2026\"\ncategories:\n  - learning\n  - data stories\n---\n\n\n  Cell In[2], line 1\n    ---\n       ^\nSyntaxError: invalid syntax\nHey everyone - Sose here! Welcome to my blog! Here I will be documenting a number of stories told by data. I am super interested in journalism and this is my first time engaging with data-driven storytelling. Buckle up for the ride ahead!"
   },
   {
     "objectID": "posts/001_First_post/Untitled.html#start-to-picture-it",
