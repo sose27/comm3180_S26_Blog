@@ -7,13 +7,6 @@
     "text": "Hi, I’m Sose and I’m a senior at the University of Pennsylvania, majoring in Communication with a concentration in data and network science. I also have minors in consumer psychology and history and plan on a career in corporate communications and marketing. I’m excited to show off what I’ve learned in my COMM data and network science classes thus far in the blog posts below!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Stories, Programming Journalism",
-    "section": "",
-    "text": "A test post\n\n\n\nvisualization\n\ndata stories\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nJan 23, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/000_test_post/index.html",
     "href": "posts/000_test_post/index.html",
     "title": "A test post",
@@ -33,5 +26,26 @@
     "title": "A test post",
     "section": "This is my first post, so don’t be too harsh (just kidding ;) ) !",
     "text": "This is my first post, so don’t be too harsh (just kidding ;) ) !"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Turning Data into Stories",
+    "section": "",
+    "text": "An introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nvisualization\n\ndata stories\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nJan 23, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/001_First_post/Untitled.html",
+    "href": "posts/001_First_post/Untitled.html",
+    "title": "An introduction",
+    "section": "",
+    "text": "---\ntitle: \"My first post!\"\ndescription: \"The beginning of our data-driven storytelling\"\nauthor: \"Sose Hovannisian\"\ndate: \"1/24/2026\"\ncategories:\n  - Learning\n  - data stories\n---\n\n\n  Cell In[1], line 1\n    ---\n       ^\nSyntaxError: invalid syntax\nHey everyone - Sose here! Welcome to my blog! Here I will be documenting a number of stories told by data. I am super interested in journalism and this is my first time engaging with data-driven storytelling. Buckle up for the ride ahead!"
+  },
+  {
+    "objectID": "posts/001_First_post/Untitled.html#start-to-picture-it",
+    "href": "posts/001_First_post/Untitled.html#start-to-picture-it",
+    "title": "An introduction",
+    "section": "Start to picture it!",
+    "text": "Start to picture it!"
   }
 ]
