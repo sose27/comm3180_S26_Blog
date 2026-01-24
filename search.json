@@ -32,19 +32,26 @@
     "href": "index.html",
     "title": "Turning Data into Stories",
     "section": "",
-    "text": "An introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nvisualization\n\ndata stories\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nJan 23, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
+    "text": "My first post\n\n\n\nlearning\n\ndata stories\n\n\n\nThe Beginning our of Data-driven Storytelling\n\n\n\n\n\nJan 24, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nvisualization\n\ndata stories\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nJan 23, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/001_First_post/Untitled.html",
     "href": "posts/001_First_post/Untitled.html",
-    "title": "An introduction",
+    "title": "My first post",
     "section": "",
-    "text": "---\ntitle: \"My first post\"\ndescription: \"The Beginning our of Data-driven Storytelling\"\nauthor: \"Sose Hovannisian\"\ndate: \"1/24/2026\"\ncategories:\n  - learning\n  - data stories\n---\n\n\n  Cell In[2], line 1\n    ---\n       ^\nSyntaxError: invalid syntax\nHey everyone - Sose here! Welcome to my blog! Here I will be documenting a number of stories told by data. I am super interested in journalism and this is my first time engaging with data-driven storytelling. Buckle up for the ride ahead!"
+    "text": "Hey everyone - Sose here! Welcome to my blog! Here I will be documenting a number of stories told by data. I am super interested in journalism and this is my first time engaging with data-driven storytelling. Buckle up for the ride ahead!\n\n\nNumbers are everywhere. We may not immediately see a story when we see endless lists or charts of numbers, but they always tell a story! Throughout this semester, we will work together to learn how to extract impactful, important stories out of seemingly meaningless datasets."
+  },
+  {
+    "objectID": "posts/001_First_post/Untitled.html#an-introduction",
+    "href": "posts/001_First_post/Untitled.html#an-introduction",
+    "title": "My first post",
+    "section": "",
+    "text": "Hey everyone - Sose here! Welcome to my blog! Here I will be documenting a number of stories told by data. I am super interested in journalism and this is my first time engaging with data-driven storytelling. Buckle up for the ride ahead!\n\n\nNumbers are everywhere. We may not immediately see a story when we see endless lists or charts of numbers, but they always tell a story! Throughout this semester, we will work together to learn how to extract impactful, important stories out of seemingly meaningless datasets."
   },
   {
     "objectID": "posts/001_First_post/Untitled.html#start-to-picture-it",
     "href": "posts/001_First_post/Untitled.html#start-to-picture-it",
-    "title": "An introduction",
+    "title": "My first post",
     "section": "Start to picture it!",
     "text": "Start to picture it!"
   }
