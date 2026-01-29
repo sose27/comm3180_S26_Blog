@@ -18,28 +18,7 @@
     "href": "index.html",
     "title": "Turning Data into Stories",
     "section": "",
-    "text": "Dataset of the Week 1 - The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\nIs it really always Sunny…\n\n\n\n\n\nJan 28, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nMy first post\n\n\n\nlearning\n\ndata stories\n\n\n\nThe Beginning our of Data driven Storytelling\n\n\n\n\n\nJan 24, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nvisualization\n\ndata stories\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nJan 23, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/000_test_post/index.html",
-    "href": "posts/000_test_post/index.html",
-    "title": "A test post",
-    "section": "",
-    "text": "import matplotlib.pyplot as plt"
-  },
-  {
-    "objectID": "posts/000_test_post/index.html#stories-from-data",
-    "href": "posts/000_test_post/index.html#stories-from-data",
-    "title": "A test post",
-    "section": "Stories from data",
-    "text": "Stories from data\n\nLet’s set up some data\n\n\nx = ['A', 'B', 'C']\ny = [1, 5, 3]\n\n\nNow let’s visualize it\n\nplt.bar(x, y)\nplt.show()"
-  },
-  {
-    "objectID": "posts/000_test_post/index.html#this-is-my-first-post-so-dont-be-too-harsh-just-kidding",
-    "href": "posts/000_test_post/index.html#this-is-my-first-post-so-dont-be-too-harsh-just-kidding",
-    "title": "A test post",
-    "section": "This is my first post, so don’t be too harsh (just kidding ;) ) !",
-    "text": "This is my first post, so don’t be too harsh (just kidding ;) ) !"
+    "text": "Dataset of the Week 1 - The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\nIs it really always Sunny…\n\n\n\n\n\nJan 28, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nMy first post\n\n\n\nlearning\n\ndata stories\n\n\n\nThe Beginning our of Data driven Storytelling\n\n\n\n\n\nJan 24, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/001_First_post/Untitled.html",
