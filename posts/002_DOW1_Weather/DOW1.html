@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sose Hovannisian">
-<meta name="dcterms.date" content="2026-01-28">
-<meta name="description" content="Is it really always Sunny…">
+<meta name="dcterms.date" content="2026-02-06">
+<meta name="description" content="Cake and Candles on a Rainy Day…">
 
 <title>Dataset of the Week 1 - The Weather in Philadelphia – Sose’s Data Stories</title>
 <style>
@@ -61,7 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -106,6 +106,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -151,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <h1 class="title">Dataset of the Week 1 - The Weather in Philadelphia</h1>
                   <div>
         <div class="description">
-          Is it really always Sunny…
+          Cake and Candles on a Rainy Day…
         </div>
       </div>
                           <div class="quarto-categories">
@@ -174,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 28, 2026</p>
+        <p class="date">February 6, 2026</p>
       </div>
     </div>
     
@@ -193,22 +196,1065 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="my-post" class="level3">
-<h3 class="anchored" data-anchor-id="my-post">My post</h3>
-<div id="7e8d6792-9736-4dc5-b7c4-453a6383234e" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'This is some code'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>This is some code</code></pre>
+<section id="what-they-say-isnt-true-it-is-not-always-sunny-in-philadelphia" class="level3">
+<h3 class="anchored" data-anchor-id="what-they-say-isnt-true-it-is-not-always-sunny-in-philadelphia">What they say isn’t true — It is <em>not</em> always Sunny in Philadelphia</h3>
+<p><img src="bday.png" class="img-fluid"></p>
+<div id="66055631-a8fb-4e18-81a7-89352db84872" class="cell" data-execution_count="47">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<div id="02534e92-28bf-47d0-b622-c80aa1e6d95c" class="cell" data-execution_count="48">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>weather_df <span class="op">=</span> pd.read_csv(<span class="st">'philadelphia_weather_2005_to_2025.csv'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="3ac4b47b-bcfd-4cde-886d-e2082e7d787f" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span>, <span class="dv">101</span>, <span class="dv">310</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>(27, 101, 310)</code></pre>
-</div>
-</div>
+</section>
+<section id="i-have-always-been-one-to-enjoy-my-birthday-but-that-was-when-my-birthday-was-spent-back-home-in-sunny-los-angeles.-ever-since-moving-to-philadelphia-for-university-my-birthday-has-fallen-on-rather-gloomy-days.-when-i-thought-about-it-the-other-day-i-realized-that-it-has-rained-on-my-birthday-here-in-philly-ever-since-i-got-here." class="level3">
+<h3 class="anchored" data-anchor-id="i-have-always-been-one-to-enjoy-my-birthday-but-that-was-when-my-birthday-was-spent-back-home-in-sunny-los-angeles.-ever-since-moving-to-philadelphia-for-university-my-birthday-has-fallen-on-rather-gloomy-days.-when-i-thought-about-it-the-other-day-i-realized-that-it-has-rained-on-my-birthday-here-in-philly-ever-since-i-got-here.">I have always been one to enjoy my birthday, but that was when my birthday was spent back home in sunny Los Angeles. Ever since moving to Philadelphia for university, my birthday has fallen on rather gloomy days. When I thought about it the other day, I realized that it has rained on my birthday here in Philly ever since I got here.</h3>
+</section>
+<section id="i-was-curious-to-see-how-many-times-in-the-last-21-years-it-really-did-rain-on-february-27th" class="level3">
+<h3 class="anchored" data-anchor-id="i-was-curious-to-see-how-many-times-in-the-last-21-years-it-really-did-rain-on-february-27th">I was curious to see how many times in the last 21 years it really did rain on February 27th!</h3>
+</section>
+<section id="how-many-times-has-it-rained-on-feb-27th" class="level2">
+<h2 class="anchored" data-anchor-id="how-many-times-has-it-rained-on-feb-27th">How many times has it rained on Feb 27th?</h2>
+<div id="be2778ae-c1ce-486d-ba2c-d3cbd9405a45" class="cell" data-execution_count="49">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>feb27 <span class="op">=</span> weather_df.query(<span class="st">'day== "February 27"'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>feb27</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="49">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">day</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">high</th>
+<th data-quarto-table-cell-role="th">low</th>
+<th data-quarto-table-cell-role="th">rain</th>
+<th data-quarto-table-cell-role="th">snow</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">day_num</th>
+<th data-quarto-table-cell-role="th">month_num</th>
+<th data-quarto-table-cell-role="th">dow</th>
+<th data-quarto-table-cell-role="th">dow_name</th>
+<th data-quarto-table-cell-role="th">month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">57</th>
+<td>February 27</td>
+<td>2005</td>
+<td>36</td>
+<td>23</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2005-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>6</td>
+<td>Sunday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">422</th>
+<td>February 27</td>
+<td>2006</td>
+<td>33</td>
+<td>18</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2006-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>0</td>
+<td>Monday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">787</th>
+<td>February 27</td>
+<td>2007</td>
+<td>48</td>
+<td>32</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2007-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>1</td>
+<td>Tuesday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1152</th>
+<td>February 27</td>
+<td>2008</td>
+<td>44</td>
+<td>27</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2008-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>2</td>
+<td>Wednesday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1518</th>
+<td>February 27</td>
+<td>2009</td>
+<td>64</td>
+<td>36</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2009-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>4</td>
+<td>Friday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1883</th>
+<td>February 27</td>
+<td>2010</td>
+<td>41</td>
+<td>27</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2010-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>5</td>
+<td>Saturday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2248</th>
+<td>February 27</td>
+<td>2011</td>
+<td>56</td>
+<td>36</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2011-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>6</td>
+<td>Sunday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2613</th>
+<td>February 27</td>
+<td>2012</td>
+<td>60</td>
+<td>32</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2012-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>0</td>
+<td>Monday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2979</th>
+<td>February 27</td>
+<td>2013</td>
+<td>53</td>
+<td>41</td>
+<td>0.12</td>
+<td>0.0</td>
+<td>2013-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>2</td>
+<td>Wednesday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3344</th>
+<td>February 27</td>
+<td>2014</td>
+<td>35</td>
+<td>16</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2014-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>3</td>
+<td>Thursday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">3709</th>
+<td>February 27</td>
+<td>2015</td>
+<td>31</td>
+<td>22</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2015-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>4</td>
+<td>Friday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4074</th>
+<td>February 27</td>
+<td>2016</td>
+<td>44</td>
+<td>27</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2016-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>5</td>
+<td>Saturday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4440</th>
+<td>February 27</td>
+<td>2017</td>
+<td>54</td>
+<td>31</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2017-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>0</td>
+<td>Monday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4805</th>
+<td>February 27</td>
+<td>2018</td>
+<td>56</td>
+<td>33</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2018-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>1</td>
+<td>Tuesday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5170</th>
+<td>February 27</td>
+<td>2019</td>
+<td>39</td>
+<td>25</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2019-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>2</td>
+<td>Wednesday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5535</th>
+<td>February 27</td>
+<td>2020</td>
+<td>48</td>
+<td>32</td>
+<td>0.21</td>
+<td>0.0</td>
+<td>2020-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>3</td>
+<td>Thursday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5901</th>
+<td>February 27</td>
+<td>2021</td>
+<td>52</td>
+<td>34</td>
+<td>0.36</td>
+<td>0.0</td>
+<td>2021-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>5</td>
+<td>Saturday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">6266</th>
+<td>February 27</td>
+<td>2022</td>
+<td>52</td>
+<td>29</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2022-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>6</td>
+<td>Sunday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6631</th>
+<td>February 27</td>
+<td>2023</td>
+<td>51</td>
+<td>35</td>
+<td>0.24</td>
+<td>0.0</td>
+<td>2023-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>0</td>
+<td>Monday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">6996</th>
+<td>February 27</td>
+<td>2024</td>
+<td>65</td>
+<td>36</td>
+<td>0.11</td>
+<td>0.0</td>
+<td>2024-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>1</td>
+<td>Tuesday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">7362</th>
+<td>February 27</td>
+<td>2025</td>
+<td>54</td>
+<td>42</td>
+<td>0.02</td>
+<td>0.0</td>
+<td>2025-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>3</td>
+<td>Thursday</td>
+<td>February</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<section id="as-we-can-see-here-in-the-last-21-years-it-has-rained-6-times-on-february-27th.-lets-see-if-of-those-6-times-three-of-them-truly-were-during-my-college-years" class="level3">
+<h3 class="anchored" data-anchor-id="as-we-can-see-here-in-the-last-21-years-it-has-rained-6-times-on-february-27th.-lets-see-if-of-those-6-times-three-of-them-truly-were-during-my-college-years">As we can see here, in the last 21 years, it has rained 6 times on February 27th. Let’s see if of those 6 times, three of them truly were during my college years:</h3>
+<div id="b1f6efdd-27fe-474a-aa74-34eb3f75d8c4" class="cell" data-execution_count="50">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>it_rained <span class="op">=</span> feb27[<span class="st">'rain'</span>]<span class="op">&gt;</span><span class="dv">0</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>feb27[it_rained]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="50">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">day</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">high</th>
+<th data-quarto-table-cell-role="th">low</th>
+<th data-quarto-table-cell-role="th">rain</th>
+<th data-quarto-table-cell-role="th">snow</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">day_num</th>
+<th data-quarto-table-cell-role="th">month_num</th>
+<th data-quarto-table-cell-role="th">dow</th>
+<th data-quarto-table-cell-role="th">dow_name</th>
+<th data-quarto-table-cell-role="th">month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2979</th>
+<td>February 27</td>
+<td>2013</td>
+<td>53</td>
+<td>41</td>
+<td>0.12</td>
+<td>0.0</td>
+<td>2013-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>2</td>
+<td>Wednesday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5535</th>
+<td>February 27</td>
+<td>2020</td>
+<td>48</td>
+<td>32</td>
+<td>0.21</td>
+<td>0.0</td>
+<td>2020-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>3</td>
+<td>Thursday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5901</th>
+<td>February 27</td>
+<td>2021</td>
+<td>52</td>
+<td>34</td>
+<td>0.36</td>
+<td>0.0</td>
+<td>2021-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>5</td>
+<td>Saturday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">6631</th>
+<td>February 27</td>
+<td>2023</td>
+<td>51</td>
+<td>35</td>
+<td>0.24</td>
+<td>0.0</td>
+<td>2023-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>0</td>
+<td>Monday</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6996</th>
+<td>February 27</td>
+<td>2024</td>
+<td>65</td>
+<td>36</td>
+<td>0.11</td>
+<td>0.0</td>
+<td>2024-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>1</td>
+<td>Tuesday</td>
+<td>February</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7362</th>
+<td>February 27</td>
+<td>2025</td>
+<td>54</td>
+<td>42</td>
+<td>0.02</td>
+<td>0.0</td>
+<td>2025-02-27</td>
+<td>27</td>
+<td>2</td>
+<td>3</td>
+<td>Thursday</td>
+<td>February</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="aha-in-my-time-at-penn-aug-2022---present-it-has-in-fact-rained-on-my-birthday-every-year" class="level3">
+<h3 class="anchored" data-anchor-id="aha-in-my-time-at-penn-aug-2022---present-it-has-in-fact-rained-on-my-birthday-every-year">Aha! In my time at Penn (Aug 2022 - Present), it has in fact rained on my birthday every year!</h3>
+</section>
+<section id="seems-like-the-weather-gods-decided-to-take-a-year-off-in-2022-breaking-up-the-streak-from-2020-2025." class="level3">
+<h3 class="anchored" data-anchor-id="seems-like-the-weather-gods-decided-to-take-a-year-off-in-2022-breaking-up-the-streak-from-2020-2025.">Seems like the weather gods decided to take a year off in 2022, breaking up the streak from 2020-2025.</h3>
+</section>
+<section id="if-only-i-had-been-born-ten-years-earlier-wouldve-seen-blue-skies-and-birthday-smiles-guess-i-am-just-cursed-just-kidding" class="level3">
+<h3 class="anchored" data-anchor-id="if-only-i-had-been-born-ten-years-earlier-wouldve-seen-blue-skies-and-birthday-smiles-guess-i-am-just-cursed-just-kidding">If only I had been born ten years earlier… would’ve seen blue skies and birthday smiles! Guess I am just cursed (just kidding)!</h3>
+<p><img src="rain.png" class="img-fluid"></p>
+<section id="but-how-do-we-know-this" class="level4">
+<h4 class="anchored" data-anchor-id="but-how-do-we-know-this">But how do we know this?</h4>
+<section id="the-steps-taken-via-code-are-not-all-that-different-from-what-we-wouldve-done-with-a-dataset-by-hand-the-steps-are-actually-rather-simple" class="level5">
+<h5 class="anchored" data-anchor-id="the-steps-taken-via-code-are-not-all-that-different-from-what-we-wouldve-done-with-a-dataset-by-hand-the-steps-are-actually-rather-simple">The steps taken via code are not all that different from what we would’ve done with a dataset by hand! The steps are actually rather simple:</h5>
+<ul>
+<li>First, we filter for the February 27 dates in the ‘day’ column of the dataset</li>
+<li>Then, we access the ‘rain’ column to see if it rained or not. How do we know? If the listed number is &gt; 0, it rained!</li>
+<li>Next, we count down the ‘rain’ column for the days with &gt; 0.0 rain</li>
+<li>Finally, we concur: 6 recorded days of rain on February 27th in the last 21 years!</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="now-how-different-would-this-be-if-i-was-born-just-a-month-later-say-on-march-27th" class="level2">
+<h2 class="anchored" data-anchor-id="now-how-different-would-this-be-if-i-was-born-just-a-month-later-say-on-march-27th">Now, how different would this be if I was born just a month later, say, on March 27th?</h2>
+<section id="lets-follow-the-same-steps-to-find-out" class="level3">
+<h3 class="anchored" data-anchor-id="lets-follow-the-same-steps-to-find-out">Let’s follow the same steps to find out!</h3>
+<div id="528b43bd-b9ca-4662-a440-05a8d748c6bb" class="cell" data-execution_count="51">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mar27 <span class="op">=</span> weather_df.query(<span class="st">'day== "March 27"'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mar27</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">day</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">high</th>
+<th data-quarto-table-cell-role="th">low</th>
+<th data-quarto-table-cell-role="th">rain</th>
+<th data-quarto-table-cell-role="th">snow</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">day_num</th>
+<th data-quarto-table-cell-role="th">month_num</th>
+<th data-quarto-table-cell-role="th">dow</th>
+<th data-quarto-table-cell-role="th">dow_name</th>
+<th data-quarto-table-cell-role="th">month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">85</th>
+<td>March 27</td>
+<td>2005</td>
+<td>52</td>
+<td>40</td>
+<td>0.11</td>
+<td>0.0</td>
+<td>2005-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>6</td>
+<td>Sunday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">450</th>
+<td>March 27</td>
+<td>2006</td>
+<td>58</td>
+<td>38</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2006-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>0</td>
+<td>Monday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">815</th>
+<td>March 27</td>
+<td>2007</td>
+<td>82</td>
+<td>47</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2007-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>1</td>
+<td>Tuesday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1181</th>
+<td>March 27</td>
+<td>2008</td>
+<td>50</td>
+<td>43</td>
+<td>0.04</td>
+<td>0.0</td>
+<td>2008-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>3</td>
+<td>Thursday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1546</th>
+<td>March 27</td>
+<td>2009</td>
+<td>63</td>
+<td>42</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2009-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>4</td>
+<td>Friday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1911</th>
+<td>March 27</td>
+<td>2010</td>
+<td>48</td>
+<td>31</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2010-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>5</td>
+<td>Saturday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2276</th>
+<td>March 27</td>
+<td>2011</td>
+<td>46</td>
+<td>30</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2011-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>6</td>
+<td>Sunday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2642</th>
+<td>March 27</td>
+<td>2012</td>
+<td>54</td>
+<td>32</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2012-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>1</td>
+<td>Tuesday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">3007</th>
+<td>March 27</td>
+<td>2013</td>
+<td>52</td>
+<td>37</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2013-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>2</td>
+<td>Wednesday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3372</th>
+<td>March 27</td>
+<td>2014</td>
+<td>45</td>
+<td>23</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2014-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>3</td>
+<td>Thursday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">3737</th>
+<td>March 27</td>
+<td>2015</td>
+<td>48</td>
+<td>39</td>
+<td>0.20</td>
+<td>0.0</td>
+<td>2015-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>4</td>
+<td>Friday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4103</th>
+<td>March 27</td>
+<td>2016</td>
+<td>60</td>
+<td>44</td>
+<td>0.02</td>
+<td>0.0</td>
+<td>2016-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>6</td>
+<td>Sunday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4468</th>
+<td>March 27</td>
+<td>2017</td>
+<td>62</td>
+<td>42</td>
+<td>0.09</td>
+<td>0.0</td>
+<td>2017-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>0</td>
+<td>Monday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4833</th>
+<td>March 27</td>
+<td>2018</td>
+<td>47</td>
+<td>31</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2018-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>1</td>
+<td>Tuesday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5198</th>
+<td>March 27</td>
+<td>2019</td>
+<td>53</td>
+<td>31</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2019-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>2</td>
+<td>Wednesday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5564</th>
+<td>March 27</td>
+<td>2020</td>
+<td>69</td>
+<td>49</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2020-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>4</td>
+<td>Friday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5929</th>
+<td>March 27</td>
+<td>2021</td>
+<td>69</td>
+<td>48</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2021-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>5</td>
+<td>Saturday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">6294</th>
+<td>March 27</td>
+<td>2022</td>
+<td>45</td>
+<td>31</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2022-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>6</td>
+<td>Sunday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6659</th>
+<td>March 27</td>
+<td>2023</td>
+<td>66</td>
+<td>39</td>
+<td>0.15</td>
+<td>0.0</td>
+<td>2023-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>0</td>
+<td>Monday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7025</th>
+<td>March 27</td>
+<td>2024</td>
+<td>50</td>
+<td>43</td>
+<td>0.33</td>
+<td>0.0</td>
+<td>2024-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>2</td>
+<td>Wednesday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">7390</th>
+<td>March 27</td>
+<td>2025</td>
+<td>54</td>
+<td>33</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>2025-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>3</td>
+<td>Thursday</td>
+<td>March</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="now-lets-see-how-many-of-these-march-27-days-had-recorded-rain" class="level3">
+<h3 class="anchored" data-anchor-id="now-lets-see-how-many-of-these-march-27-days-had-recorded-rain">Now let’s see how many of these March 27 days had recorded rain</h3>
+<div id="b32ee2b1-e007-44e9-a11b-21b9b621fa66" class="cell" data-execution_count="52">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>it_rained_march <span class="op">=</span> mar27[<span class="st">'rain'</span>]<span class="op">&gt;</span><span class="dv">0</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mar27[it_rained_march]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="52">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">day</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">high</th>
+<th data-quarto-table-cell-role="th">low</th>
+<th data-quarto-table-cell-role="th">rain</th>
+<th data-quarto-table-cell-role="th">snow</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">day_num</th>
+<th data-quarto-table-cell-role="th">month_num</th>
+<th data-quarto-table-cell-role="th">dow</th>
+<th data-quarto-table-cell-role="th">dow_name</th>
+<th data-quarto-table-cell-role="th">month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">85</th>
+<td>March 27</td>
+<td>2005</td>
+<td>52</td>
+<td>40</td>
+<td>0.11</td>
+<td>0.0</td>
+<td>2005-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>6</td>
+<td>Sunday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1181</th>
+<td>March 27</td>
+<td>2008</td>
+<td>50</td>
+<td>43</td>
+<td>0.04</td>
+<td>0.0</td>
+<td>2008-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>3</td>
+<td>Thursday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">3737</th>
+<td>March 27</td>
+<td>2015</td>
+<td>48</td>
+<td>39</td>
+<td>0.20</td>
+<td>0.0</td>
+<td>2015-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>4</td>
+<td>Friday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4103</th>
+<td>March 27</td>
+<td>2016</td>
+<td>60</td>
+<td>44</td>
+<td>0.02</td>
+<td>0.0</td>
+<td>2016-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>6</td>
+<td>Sunday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4468</th>
+<td>March 27</td>
+<td>2017</td>
+<td>62</td>
+<td>42</td>
+<td>0.09</td>
+<td>0.0</td>
+<td>2017-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>0</td>
+<td>Monday</td>
+<td>March</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">6659</th>
+<td>March 27</td>
+<td>2023</td>
+<td>66</td>
+<td>39</td>
+<td>0.15</td>
+<td>0.0</td>
+<td>2023-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>0</td>
+<td>Monday</td>
+<td>March</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">7025</th>
+<td>March 27</td>
+<td>2024</td>
+<td>50</td>
+<td>43</td>
+<td>0.33</td>
+<td>0.0</td>
+<td>2024-03-27</td>
+<td>27</td>
+<td>3</td>
+<td>2</td>
+<td>Wednesday</td>
+<td>March</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="one-day-more-than-feb" class="level3">
+<h3 class="anchored" data-anchor-id="one-day-more-than-feb">One day more than Feb!</h3>
+<section id="i-guess-being-born-a-month-later-really-doesnt-help-much-at-all-if-anything-it-might-be-worse-in-terms-of-rain-however-i-did-selfishly-notice-only-2023-and-2024-of-my-college-experience-had-recorded-rain-on-march-27th-one-less-time-than-my-true-birthday." class="level4">
+<h4 class="anchored" data-anchor-id="i-guess-being-born-a-month-later-really-doesnt-help-much-at-all-if-anything-it-might-be-worse-in-terms-of-rain-however-i-did-selfishly-notice-only-2023-and-2024-of-my-college-experience-had-recorded-rain-on-march-27th-one-less-time-than-my-true-birthday.">I guess being born a month later really doesn’t help much at all! If anything, it might be worse in terms of rain! However, I did selfishly notice only 2023 and 2024 of my college experience had recorded rain on March 27th, one less time than my true birthday.</h4>
+</section>
+</section>
+</section>
+<section id="oh-well-at-least-it-doesnt-snow-right" class="level2">
+<h2 class="anchored" data-anchor-id="oh-well-at-least-it-doesnt-snow-right">Oh well, at least it doesn’t snow… right?!?!?!</h2>
+<section id="lets-double-check-just-to-be-sure" class="level3">
+<h3 class="anchored" data-anchor-id="lets-double-check-just-to-be-sure">Let’s double check just to be sure…</h3>
+<div id="f6e3bb7e-d6cc-4c56-8f4c-dd2be071b46c" class="cell" data-execution_count="53">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>it_snowed <span class="op">=</span> feb27[<span class="st">'snow'</span>]<span class="op">&gt;</span><span class="dv">0</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>feb27[it_snowed]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="53">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">day</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">high</th>
+<th data-quarto-table-cell-role="th">low</th>
+<th data-quarto-table-cell-role="th">rain</th>
+<th data-quarto-table-cell-role="th">snow</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">day_num</th>
+<th data-quarto-table-cell-role="th">month_num</th>
+<th data-quarto-table-cell-role="th">dow</th>
+<th data-quarto-table-cell-role="th">dow_name</th>
+<th data-quarto-table-cell-role="th">month</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="phew.-no-snow." class="level3">
+<h3 class="anchored" data-anchor-id="phew.-no-snow.">PHEW. No Snow.</h3>
+</section>
+<section id="thanks-for-tuning-in-to-my-weather-journey-if-only-the-code-could-predict-whether-itll-rain-on-my-birthday-this-year-i-guess-only-time-will-tell" class="level3">
+<h3 class="anchored" data-anchor-id="thanks-for-tuning-in-to-my-weather-journey-if-only-the-code-could-predict-whether-itll-rain-on-my-birthday-this-year-i-guess-only-time-will-tell">Thanks for tuning in to my weather journey! If only the code could predict whether it’ll rain on my birthday this year! I guess only time will tell…</h3>
+<p><img src="predict.png" class="img-fluid"></p>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->
