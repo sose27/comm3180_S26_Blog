@@ -198,11 +198,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="what-they-say-isnt-true-it-is-not-always-sunny-in-philadelphia" class="level3">
 <h3 class="anchored" data-anchor-id="what-they-say-isnt-true-it-is-not-always-sunny-in-philadelphia">What they say isn’t true — It is <em>not</em> always Sunny in Philadelphia</h3>
-<div id="66055631-a8fb-4e18-81a7-89352db84872" class="cell" data-execution_count="47">
+<div id="66055631-a8fb-4e18-81a7-89352db84872" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="02534e92-28bf-47d0-b622-c80aa1e6d95c" class="cell" data-execution_count="54">
+<div id="02534e92-28bf-47d0-b622-c80aa1e6d95c" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>weather_df <span class="op">=</span> pd.read_csv(<span class="st">'philadelphia_weather_2005_to_2025.csv'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -215,10 +215,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="how-many-times-has-it-rained-on-feb-27th" class="level2">
 <h2 class="anchored" data-anchor-id="how-many-times-has-it-rained-on-feb-27th">How many times has it rained on Feb 27th?</h2>
-<div id="be2778ae-c1ce-486d-ba2c-d3cbd9405a45" class="cell" data-execution_count="49">
+<div id="be2778ae-c1ce-486d-ba2c-d3cbd9405a45" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>feb27 <span class="op">=</span> weather_df.query(<span class="st">'day== "February 27"'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>feb27</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="49">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -564,10 +564,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="as-we-can-see-here-in-the-last-21-years-it-has-rained-6-times-on-february-27th.-lets-see-if-of-those-6-times-three-of-them-truly-were-during-my-college-years" class="level3">
 <h3 class="anchored" data-anchor-id="as-we-can-see-here-in-the-last-21-years-it-has-rained-6-times-on-february-27th.-lets-see-if-of-those-6-times-three-of-them-truly-were-during-my-college-years">As we can see here, in the last 21 years, it has rained 6 times on February 27th. Let’s see if of those 6 times, three of them truly were during my college years:</h3>
-<div id="b1f6efdd-27fe-474a-aa74-34eb3f75d8c4" class="cell" data-execution_count="50">
+<div id="b1f6efdd-27fe-474a-aa74-34eb3f75d8c4" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>it_rained <span class="op">=</span> feb27[<span class="st">'rain'</span>]<span class="op">&gt;</span><span class="dv">0</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>feb27[it_rained]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="50">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -714,10 +714,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="now-how-different-would-this-be-if-i-was-born-just-a-month-later-say-on-march-27th">Now, how different would this be if I was born just a month later, say, on March 27th?</h2>
 <section id="lets-follow-the-same-steps-to-find-out" class="level3">
 <h3 class="anchored" data-anchor-id="lets-follow-the-same-steps-to-find-out">Let’s follow the same steps to find out!</h3>
-<div id="528b43bd-b9ca-4662-a440-05a8d748c6bb" class="cell" data-execution_count="51">
+<div id="528b43bd-b9ca-4662-a440-05a8d748c6bb" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mar27 <span class="op">=</span> weather_df.query(<span class="st">'day== "March 27"'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mar27</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="51">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
@@ -1064,10 +1064,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="now-lets-see-how-many-of-these-march-27-days-had-recorded-rain" class="level3">
 <h3 class="anchored" data-anchor-id="now-lets-see-how-many-of-these-march-27-days-had-recorded-rain">Now let’s see how many of these March 27 days had recorded rain</h3>
-<div id="b32ee2b1-e007-44e9-a11b-21b9b621fa66" class="cell" data-execution_count="52">
+<div id="b32ee2b1-e007-44e9-a11b-21b9b621fa66" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>it_rained_march <span class="op">=</span> mar27[<span class="st">'rain'</span>]<span class="op">&gt;</span><span class="dv">0</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mar27[it_rained_march]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="52">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
@@ -1213,10 +1213,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="oh-well-at-least-it-doesnt-snow-right">Oh well, at least it doesn’t snow… right?!?!?!</h2>
 <section id="lets-double-check-just-to-be-sure" class="level3">
 <h3 class="anchored" data-anchor-id="lets-double-check-just-to-be-sure">Let’s double check just to be sure…</h3>
-<div id="f6e3bb7e-d6cc-4c56-8f4c-dd2be071b46c" class="cell" data-execution_count="53">
+<div id="f6e3bb7e-d6cc-4c56-8f4c-dd2be071b46c" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>it_snowed <span class="op">=</span> feb27[<span class="st">'snow'</span>]<span class="op">&gt;</span><span class="dv">0</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>feb27[it_snowed]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="53">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
