@@ -61,7 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -106,6 +106,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -199,113 +202,189 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="the-big-five-personality-test-or-five-factor-model-ffm-is-a-widely-accepted-evidence-based-psychological-assessment-that-measures-five-core-dimensions-of-human-personality-openness-conscientiousness-extraversion-agreeableness-and-neuroticism-ocean.-it-uses-self-report-questionnaires-to-evaluate-traits-on-a-spectrum-commonly-used-for-hiring-counseling-and-self-discovery.">The Big Five personality test, or Five-Factor Model (FFM), is a widely accepted, evidence-based psychological assessment that measures five core dimensions of human personality: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN). It uses self-report questionnaires to evaluate traits on a spectrum, commonly used for hiring, counseling, and self-discovery.</h4>
 <p>We took the Big 5 Personality Test in our class and these are the results I got!</p>
 <p><img src="img/big_5.png" class="img-fluid"></p>
-<div id="f52f4da1-3791-4835-8332-48a94ae381fc" class="cell" data-execution_count="1">
+</section>
+</section>
+<section id="initial-motivation" class="level2">
+<h2 class="anchored" data-anchor-id="initial-motivation">Initial motivation</h2>
+<section id="when-i-received-my-own-results-i-was-surprised.-my-agreeableness-score-was-very-high-which-felt-accurate-but-my-emotional-stability-the-inverse-of-neuroticism-was-much-more-average-than-i-expected.-i-had-always-assumed-that-being-more-agreeable-would-naturally-mean-being-emotionally-calmer." class="level3">
+<h3 class="anchored" data-anchor-id="when-i-received-my-own-results-i-was-surprised.-my-agreeableness-score-was-very-high-which-felt-accurate-but-my-emotional-stability-the-inverse-of-neuroticism-was-much-more-average-than-i-expected.-i-had-always-assumed-that-being-more-agreeable-would-naturally-mean-being-emotionally-calmer.">When I received my own results, I was surprised. My agreeableness score was very high, which felt accurate, but my emotional stability (the inverse of neuroticism) was much more average than I expected. I had always assumed that being more agreeable would naturally mean being emotionally calmer.</h3>
+</section>
+<section id="that-assumption-made-me-curious-about-whether-this-relationship-showed-up-in-other-peoples-results-as-well-or-if-it-was-just-something-i-noticed-in-myself." class="level3">
+<h3 class="anchored" data-anchor-id="that-assumption-made-me-curious-about-whether-this-relationship-showed-up-in-other-peoples-results-as-well-or-if-it-was-just-something-i-noticed-in-myself.">That assumption made me curious about whether this relationship showed up in other people’s results as well, or if it was just something I noticed in myself.</h3>
+<div id="dbf11728-4c8e-47fb-ba74-58b539c29c33" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load datasets</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>class_big5_df <span class="op">=</span> pd.read_csv(<span class="st">"class_big5_data.csv"</span>, sep<span class="op">=</span><span class="st">"</span><span class="ch">\t</span><span class="st">"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Fix delimiter if needed</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(class_big5_df.columns) <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    class_big5_df <span class="op">=</span> pd.read_csv(<span class="st">"class_big5_data.csv"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>big5_df <span class="op">=</span> pd.read_csv(<span class="st">"openpsych_data.csv"</span>, sep<span class="op">=</span><span class="st">"</span><span class="ch">\t</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="fff36e93-e355-4476-90a8-c70613e985f1" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>big5_df <span class="op">=</span> pd.read_csv(<span class="st">'openpsych_data.csv'</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="91641f52-662d-4cd3-807a-22f0ef5663e8" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>big5_df.columns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>Index(['race', 'age', 'engnat', 'gender', 'hand', 'source', 'country', 'E1',
-       'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9', 'E10', 'N1', 'N2', 'N3',
-       'N4', 'N5', 'N6', 'N7', 'N8', 'N9', 'N10', 'A1', 'A2', 'A3', 'A4', 'A5',
-       'A6', 'A7', 'A8', 'A9', 'A10', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7',
-       'C8', 'C9', 'C10', 'O1', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'O9',
-       'O10'],
-      dtype='str')</code></pre>
-</div>
-</div>
-<div id="35706b9b-0ebd-4f1d-87f2-27646f5c81f8" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gender_map <span class="op">=</span> {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span>: pd.NA,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>: <span class="st">'male'</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span>: <span class="st">'female'</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span>: <span class="st">'other'</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="b7366c08-fca2-4971-a83f-400fa9484066" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>big5_df[<span class="st">'gender'</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>gender
-2    11985
-1     7608
-3      102
-0       24
-Name: count, dtype: int64</code></pre>
-</div>
-</div>
-<div id="61a936c7-9684-4400-9e93-f198ae27be8e" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>big5_df<span class="op">=</span>big5_df.assign(gender_cat<span class="op">=</span>big5_df[<span class="st">'gender'</span>].<span class="bu">map</span>(gender_map))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="33188364-7cd3-42cc-89a8-557b9d689b3e" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>big5_df[<span class="st">'gender_cat'</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>gender_cat
-female    11985
-male       7608
-other       102
-Name: count, dtype: int64</code></pre>
-</div>
-</div>
-<p>curiosu about relationship between scores agreeableness –&gt; neurotocism? does anyone else have this pattern? high in one, low in another eyeball class data look at 20,000 person full dataset, then we can start to really ask that question</p>
-<div id="6ce8f806-5267-459b-b114-2e7543651067" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>big5_df[<span class="st">'country'</span>].value_counts().head(<span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>country
-US     8753
-GB     1531
-IN     1464
-AU      974
-CA      924
-PH      649
-(nu     369
-IT      277
-MY      247
-PK      222
-DE      191
-ZA      179
-BR      175
-ID      172
-SE      169
-NZ      157
-NO      147
-RO      135
-SG      133
-NL      133
-Name: count, dtype: int64</code></pre>
-</div>
-</div>
-<div id="380aaaae-ce0c-48ee-a524-2114166bcf3b" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>big5_df[<span class="st">'country'</span>].nunique()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>158</code></pre>
-</div>
-</div>
-<div id="fbda3680-e084-458e-aaa8-099c2b928186" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>big5_scored_df[[<span class="st">'O'</span>, <span class="st">'C'</span>, <span class="st">'E'</span>, <span class="st">'A'</span>, <span class="st">'N'</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[16]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-yellow-bg">big5_scored_df</span>[[<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">O</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">E</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">N</span><span class="ansi-yellow-fg">'</span>]]
+<div id="f5ffc54e-0578-4c28-933f-64b4de815e93" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>class_scored_df <span class="op">=</span> class_big5_df.copy()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Class trait order</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>roman_map <span class="op">=</span> {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I"</span>: <span class="st">"O"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"II"</span>: <span class="st">"C"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"III"</span>: <span class="st">"E"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"IV"</span>: <span class="st">"A"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"V"</span>: <span class="st">"ES"</span>  <span class="co"># Emotional Stability</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r, t <span class="kw">in</span> roman_map.items():</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    class_scored_df[t] <span class="op">=</span> pd.to_numeric(class_scored_df[r], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Emotional Stability → Neuroticism</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>es <span class="op">=</span> class_scored_df[<span class="st">"ES"</span>]</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>class_scored_df[<span class="st">"N"</span>] <span class="op">=</span> (es.<span class="bu">max</span>() <span class="op">+</span> es.<span class="bu">min</span>()) <span class="op">-</span> es</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>class_scored_df[[<span class="st">"A"</span>, <span class="st">"N"</span>]].head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<div>
 
-<span class="ansi-red-fg">NameError</span>: name 'big5_scored_df' is not defined</pre>
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">A</th>
+<th data-quarto-table-cell-role="th">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>97.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>93.0</td>
+<td>38.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>89.0</td>
+<td>14.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>96.0</td>
+<td>63.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>76.0</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
 </div>
-<p>take all the values, get a list of thr 19,0000 openness stores and compare with conscinetiousnesss scores</p>
-<p>extroversion and neurotocism are all positively coordinated, but not super strong</p>
-<p>try running .sample(1000)</p>
-<div id="b56409ca-7dbf-467c-9ef2-f61038906389" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>do people who identify w this gender give diff answers, have diff scores? </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>I started by looking at our class data to see whether the relationship I noticed in my own scores appeared among my classmates as well.</p>
+<p>If high agreeableness truly leads to lower neuroticism, I would expect to see a clear negative relationship between the two traits.</p>
+<div id="bda61fbe-4704-478f-8725-c492c45de9cd" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.scatter(class_scored_df[<span class="st">"A"</span>], class_scored_df[<span class="st">"N"</span>])</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Agreeableness"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Neuroticism"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Class Data: Agreeableness vs Neuroticism"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>class_corr <span class="op">=</span> class_scored_df[<span class="st">"A"</span>].corr(class_scored_df[<span class="st">"N"</span>])</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>class_corr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Untitled_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>np.float64(-0.13316302756818466)</code></pre>
+</div>
+</div>
+<p>Within our class, the relationship between agreeableness and neuroticism is not especially strong. While some students with high agreeableness do score lower in neuroticism, many do not.</p>
+<p>This suggests that my experience was not unique, but it also raised the question of whether this pattern holds in a much larger dataset.</p>
+<div id="ee709377-42d0-49d4-b38e-372f455c617f" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> score_trait(df, prefix):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    cols <span class="op">=</span> [<span class="ss">f"</span><span class="sc">{</span>prefix<span class="sc">}{</span>i<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>)]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df[cols].<span class="bu">apply</span>(pd.to_numeric, errors<span class="op">=</span><span class="st">"coerce"</span>).mean(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>big5_scored_df <span class="op">=</span> big5_df.copy()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>big5_scored_df[<span class="st">"A"</span>] <span class="op">=</span> score_trait(big5_scored_df, <span class="st">"A"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>big5_scored_df[<span class="st">"N"</span>] <span class="op">=</span> score_trait(big5_scored_df, <span class="st">"N"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="testing-the-idea-in-a-larger-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="testing-the-idea-in-a-larger-dataset">Testing the idea in a larger dataset</h2>
+<p>To explore this further, I looked at the OpenPsych Big Five dataset, which includes responses from nearly 20,000 people. With a dataset this large, any strong relationship between agreeableness and neuroticism should be easier to detect.</p>
+<p>However, the results were similar to what I saw in our class. Even at scale, the correlation between agreeableness and neuroticism was weak. Many people who scored high in agreeableness still reported relatively high levels of neuroticism.</p>
+<p>This suggests that being more agreeable does not consistently correspond to being less emotionally reactive or anxious.</p>
+<div id="718ec7f6-a9b0-409a-a11e-25710e467312" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> big5_scored_df[[<span class="st">"A"</span>, <span class="st">"N"</span>]].dropna().sample(<span class="dv">2500</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(sample[<span class="st">"A"</span>], sample[<span class="st">"N"</span>], alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Agreeableness"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Neuroticism"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"OpenPsych Data: Agreeableness vs Neuroticism"</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>full_corr <span class="op">=</span> big5_scored_df[<span class="st">"A"</span>].corr(big5_scored_df[<span class="st">"N"</span>])</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>full_corr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Untitled_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>np.float64(0.18144744927195994)</code></pre>
+</div>
+</div>
+<section id="even-with-a-much-larger-sample-size-the-relationship-between-agreeableness-and-neuroticism-remains-weak.-high-agreeableness-does-not-consistently-predict-low-neuroticism." class="level4">
+<h4 class="anchored" data-anchor-id="even-with-a-much-larger-sample-size-the-relationship-between-agreeableness-and-neuroticism-remains-weak.-high-agreeableness-does-not-consistently-predict-low-neuroticism.">Even with a much larger sample size, the relationship between agreeableness and neuroticism remains weak. High agreeableness does not consistently predict low neuroticism.</h4>
+</section>
+<section id="this-challenges-the-assumption-that-being-more-cooperative-or-empathetic-automatically-translates-into-emotional-stability." class="level4">
+<h4 class="anchored" data-anchor-id="this-challenges-the-assumption-that-being-more-cooperative-or-empathetic-automatically-translates-into-emotional-stability.">This challenges the assumption that being more cooperative or empathetic automatically translates into emotional stability.</h4>
+</section>
+</section>
+<section id="narrowing-the-analysis-by-gender" class="level2">
+<h2 class="anchored" data-anchor-id="narrowing-the-analysis-by-gender">Narrowing the analysis by gender</h2>
+<p>I then narrowed the analysis by gender to see if the relationship between agreeableness and neuroticism differed across groups. While average levels of each trait varied slightly, the overall relationship remained weak regardless of gender.</p>
+<p>This indicates that the lack of a strong correlation is not driven by gender differences in the dataset.</p>
+<div id="2975ffe0-46f8-451b-9df5-2c4b148d0078" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gender_map <span class="op">=</span> {<span class="dv">1</span>: <span class="st">"male"</span>, <span class="dv">2</span>: <span class="st">"female"</span>, <span class="dv">3</span>: <span class="st">"other"</span>}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>big5_scored_df[<span class="st">"gender_cat"</span>] <span class="op">=</span> big5_scored_df[<span class="st">"gender"</span>].<span class="bu">map</span>(gender_map)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>big5_scored_df.groupby(<span class="st">"gender_cat"</span>)[[<span class="st">"A"</span>, <span class="st">"N"</span>]].corr().unstack().iloc[:, <span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>gender_cat
+female    0.142175
+male      0.219107
+other     0.310406
+Name: (A, N), dtype: float64</code></pre>
+</div>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<section id="based-on-my-own-results-our-class-data-and-a-much-larger-dataset-there-is-little-evidence-that-high-agreeableness-leads-to-low-neuroticism.-while-agreeableness-is-often-seen-as-a-positive-or-socially-desirable-trait-it-does-not-appear-to-offer-consistent-protection-against-emotional-instability." class="level4">
+<h4 class="anchored" data-anchor-id="based-on-my-own-results-our-class-data-and-a-much-larger-dataset-there-is-little-evidence-that-high-agreeableness-leads-to-low-neuroticism.-while-agreeableness-is-often-seen-as-a-positive-or-socially-desirable-trait-it-does-not-appear-to-offer-consistent-protection-against-emotional-instability.">Based on my own results, our class data, and a much larger dataset, there is little evidence that high agreeableness leads to low neuroticism. While agreeableness is often seen as a positive or socially desirable trait, it does not appear to offer consistent protection against emotional instability.</h4>
+</section>
+<section id="this-analysis-challenged-an-assumption-i-didnt-realize-i-had-and-it-was-a-reminder-that-personality-traits-describe-tendencies-rather-than-outcomes.-even-traits-that-seem-intuitively-connected-do-not-always-behave-that-way-in-real-data." class="level4">
+<h4 class="anchored" data-anchor-id="this-analysis-challenged-an-assumption-i-didnt-realize-i-had-and-it-was-a-reminder-that-personality-traits-describe-tendencies-rather-than-outcomes.-even-traits-that-seem-intuitively-connected-do-not-always-behave-that-way-in-real-data.">This analysis challenged an assumption I didn’t realize I had, and it was a reminder that personality traits describe tendencies rather than outcomes. Even traits that seem intuitively connected do not always behave that way in real data.</h4>
 
 
 </section>
