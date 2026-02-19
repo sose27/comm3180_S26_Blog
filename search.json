@@ -7,6 +7,20 @@
     "text": "Hi, I’m Sose and I’m a senior at the University of Pennsylvania, majoring in Communication with a concentration in data and network science. I also have minors in consumer psychology and history and plan on a career in corporate communications and marketing. I’m excited to show off what I’ve learned in my COMM data and network science classes thus far in the blog posts below!"
   },
   {
+    "objectID": "posts/004_DOW3_Olympics/Untitled.html",
+    "href": "posts/004_DOW3_Olympics/Untitled.html",
+    "title": "Dataset of the Week 3 - Winter Olympics",
+    "section": "",
+    "text": "Armenia may not be the country you look out for during the Olympics, but it’s always first in my mind!\n\nAs a proud Armenian, I always look for my nation in global events like the Olympics, Eurovision, and the World Cup."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Turning Data into Stories",
+    "section": "",
+    "text": "Dataset of the Week 3 - Winter Olympics\n\n\n\nDOW\n\nWinter Olympics\n\nArmenia\n\n\n\nNational Pride during the Winter Olympics\n\n\n\n\n\nFeb 19, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 2 - The Big 5 Test\n\n\n\nDOW\n\nPersonality Tests\n\n\n\nA close look into the Big 5 Personality Test\n\n\n\n\n\nFeb 13, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 1 - The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\nCake and Candles on a Rainy Day…\n\n\n\n\n\nFeb 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nMy first post\n\n\n\nlearning\n\ndata stories\n\n\n\nThe Beginning our of Data-Driven Storytelling\n\n\n\n\n\nJan 24, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/002_DOW1_Weather/DOW1.html",
     "href": "posts/002_DOW1_Weather/DOW1.html",
     "title": "Dataset of the Week 1 - The Weather in Philadelphia",
@@ -33,13 +47,6 @@
     "title": "Dataset of the Week 1 - The Weather in Philadelphia",
     "section": "Oh well, at least it doesn’t snow… right?!?!?!",
     "text": "Oh well, at least it doesn’t snow… right?!?!?!\n\nLet’s double check just to be sure…\n\nit_snowed = feb27['snow']&gt;0\nfeb27[it_snowed]\n\n\n\n\n\n\n\n\nday\nyear\nhigh\nlow\nrain\nsnow\ndate\nday_num\nmonth_num\ndow\ndow_name\nmonth\n\n\n\n\n\n\n\n\n\n\n\nPHEW. No Snow.\n\n\nThanks for tuning in to my weather journey! If only the code could predict whether it’ll rain on my birthday this year! I guess only time will tell…"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Turning Data into Stories",
-    "section": "",
-    "text": "Dataset of the Week 2 - The Big 5 Test\n\n\n\nDOW\n\nPersonality Tests\n\n\n\nA close look into the Big 5 Personality Test\n\n\n\n\n\nFeb 13, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 1 - The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\nCake and Candles on a Rainy Day…\n\n\n\n\n\nFeb 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nMy first post\n\n\n\nlearning\n\ndata stories\n\n\n\nThe Beginning our of Data-Driven Storytelling\n\n\n\n\n\nJan 24, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/001_First_post/Untitled.html",
