@@ -7,48 +7,6 @@
     "text": "Hi, I’m Sose and I’m a senior at the University of Pennsylvania, majoring in Communication with a concentration in data and network science. I also have minors in consumer psychology and history and plan on a career in corporate communications and marketing. I’m excited to show off what I’ve learned in my COMM data and network science classes thus far in the blog posts below!"
   },
   {
-    "objectID": "posts/003_DOW2_Big5/Untitled.html",
-    "href": "posts/003_DOW2_Big5/Untitled.html",
-    "title": "Dataset of the Week 2 - The Big 5 Test",
-    "section": "",
-    "text": "We took the Big 5 Personality Test in our class and these are the results I got!"
-  },
-  {
-    "objectID": "posts/003_DOW2_Big5/Untitled.html#the-big-5-personality-test",
-    "href": "posts/003_DOW2_Big5/Untitled.html#the-big-5-personality-test",
-    "title": "Dataset of the Week 2 - The Big 5 Test",
-    "section": "",
-    "text": "We took the Big 5 Personality Test in our class and these are the results I got!"
-  },
-  {
-    "objectID": "posts/003_DOW2_Big5/Untitled.html#initial-motivation",
-    "href": "posts/003_DOW2_Big5/Untitled.html#initial-motivation",
-    "title": "Dataset of the Week 2 - The Big 5 Test",
-    "section": "Initial motivation",
-    "text": "Initial motivation\n\nWhen I received my own results, I was surprised. My agreeableness score was very high, which felt accurate, but my emotional stability (the inverse of neuroticism) was much more average than I expected. I had always assumed that being more agreeable would naturally mean being emotionally calmer.\n\n\nThat assumption made me curious about whether this relationship showed up in other people’s results as well, or if it was just something I noticed in myself.\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Load datasets\nclass_big5_df = pd.read_csv(\"class_big5_data.csv\", sep=\"\\t\")\n\n# Fix delimiter if needed\nif len(class_big5_df.columns) == 1:\n    class_big5_df = pd.read_csv(\"class_big5_data.csv\")\n\nbig5_df = pd.read_csv(\"openpsych_data.csv\", sep=\"\\t\")\n\n\nclass_scored_df = class_big5_df.copy()\n\n# Class trait order\nroman_map = {\n    \"I\": \"O\",\n    \"II\": \"C\",\n    \"III\": \"E\",\n    \"IV\": \"A\",\n    \"V\": \"ES\"  # Emotional Stability\n}\n\nfor r, t in roman_map.items():\n    class_scored_df[t] = pd.to_numeric(class_scored_df[r], errors=\"coerce\")\n\n# Convert Emotional Stability → Neuroticism\nes = class_scored_df[\"ES\"]\nclass_scored_df[\"N\"] = (es.max() + es.min()) - es\n\nclass_scored_df[[\"A\", \"N\"]].head()\n\n\n\n\n\n\n\n\nA\nN\n\n\n\n\n0\n97.0\n1.0\n\n\n1\n93.0\n38.0\n\n\n2\n89.0\n14.0\n\n\n3\n96.0\n63.0\n\n\n4\n76.0\n9.0\n\n\n\n\n\n\n\nI started by looking at our class data to see whether the relationship I noticed in my own scores appeared among my classmates as well.\nIf high agreeableness truly leads to lower neuroticism, I would expect to see a clear negative relationship between the two traits.\n\nplt.figure()\nplt.scatter(class_scored_df[\"A\"], class_scored_df[\"N\"])\nplt.xlabel(\"Agreeableness\")\nplt.ylabel(\"Neuroticism\")\nplt.title(\"Class Data: Agreeableness vs Neuroticism\")\nplt.show()\n\nclass_corr = class_scored_df[\"A\"].corr(class_scored_df[\"N\"])\nclass_corr\n\n\n\n\n\n\n\n\nnp.float64(-0.13316302756818466)\n\n\nWithin our class, the relationship between agreeableness and neuroticism is not especially strong. While some students with high agreeableness do score lower in neuroticism, many do not.\nThis suggests that my experience was not unique, but it also raised the question of whether this pattern holds in a much larger dataset.\n\ndef score_trait(df, prefix):\n    cols = [f\"{prefix}{i}\" for i in range(1, 11)]\n    return df[cols].apply(pd.to_numeric, errors=\"coerce\").mean(axis=1)\n\nbig5_scored_df = big5_df.copy()\nbig5_scored_df[\"A\"] = score_trait(big5_scored_df, \"A\")\nbig5_scored_df[\"N\"] = score_trait(big5_scored_df, \"N\")"
-  },
-  {
-    "objectID": "posts/003_DOW2_Big5/Untitled.html#testing-the-idea-in-a-larger-dataset",
-    "href": "posts/003_DOW2_Big5/Untitled.html#testing-the-idea-in-a-larger-dataset",
-    "title": "Dataset of the Week 2 - The Big 5 Test",
-    "section": "Testing the idea in a larger dataset",
-    "text": "Testing the idea in a larger dataset\nTo explore this further, I looked at the OpenPsych Big Five dataset, which includes responses from nearly 20,000 people. With a dataset this large, any strong relationship between agreeableness and neuroticism should be easier to detect.\nHowever, the results were similar to what I saw in our class. Even at scale, the correlation between agreeableness and neuroticism was weak. Many people who scored high in agreeableness still reported relatively high levels of neuroticism.\nThis suggests that being more agreeable does not consistently correspond to being less emotionally reactive or anxious.\n\nsample = big5_scored_df[[\"A\", \"N\"]].dropna().sample(2500, random_state=42)\n\nplt.figure()\nplt.scatter(sample[\"A\"], sample[\"N\"], alpha=0.3)\nplt.xlabel(\"Agreeableness\")\nplt.ylabel(\"Neuroticism\")\nplt.title(\"OpenPsych Data: Agreeableness vs Neuroticism\")\nplt.show()\n\nfull_corr = big5_scored_df[\"A\"].corr(big5_scored_df[\"N\"])\nfull_corr\n\n\n\n\n\n\n\n\nnp.float64(0.18144744927195994)\n\n\n\nEven with a much larger sample size, the relationship between agreeableness and neuroticism remains weak. High agreeableness does not consistently predict low neuroticism.\n\n\nThis challenges the assumption that being more cooperative or empathetic automatically translates into emotional stability."
-  },
-  {
-    "objectID": "posts/003_DOW2_Big5/Untitled.html#narrowing-the-analysis-by-gender",
-    "href": "posts/003_DOW2_Big5/Untitled.html#narrowing-the-analysis-by-gender",
-    "title": "Dataset of the Week 2 - The Big 5 Test",
-    "section": "Narrowing the analysis by gender",
-    "text": "Narrowing the analysis by gender\nI then narrowed the analysis by gender to see if the relationship between agreeableness and neuroticism differed across groups. While average levels of each trait varied slightly, the overall relationship remained weak regardless of gender.\nThis indicates that the lack of a strong correlation is not driven by gender differences in the dataset.\n\ngender_map = {1: \"male\", 2: \"female\", 3: \"other\"}\nbig5_scored_df[\"gender_cat\"] = big5_scored_df[\"gender\"].map(gender_map)\n\nbig5_scored_df.groupby(\"gender_cat\")[[\"A\", \"N\"]].corr().unstack().iloc[:, 1]\n\ngender_cat\nfemale    0.142175\nmale      0.219107\nother     0.310406\nName: (A, N), dtype: float64"
-  },
-  {
-    "objectID": "posts/003_DOW2_Big5/Untitled.html#conclusion",
-    "href": "posts/003_DOW2_Big5/Untitled.html#conclusion",
-    "title": "Dataset of the Week 2 - The Big 5 Test",
-    "section": "Conclusion",
-    "text": "Conclusion\n\nBased on my own results, our class data, and a much larger dataset, there is little evidence that high agreeableness leads to low neuroticism. While agreeableness is often seen as a positive or socially desirable trait, it does not appear to offer consistent protection against emotional instability.\n\n\nThis analysis challenged an assumption I didn’t realize I had, and it was a reminder that personality traits describe tendencies rather than outcomes. Even traits that seem intuitively connected do not always behave that way in real data."
-  },
-  {
     "objectID": "posts/001_First_post/Untitled.html",
     "href": "posts/001_First_post/Untitled.html",
     "title": "My first post",
@@ -109,7 +67,7 @@
     "href": "index.html",
     "title": "Turning Data into Stories",
     "section": "",
-    "text": "Dataset of the Week 4 - Crash Data\n\n\n\nDOW\n\nCrash Data\n\nPhiladelphia\n\n\n\nNational Pride during the Winter Olympics\n\n\n\n\n\nMar 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 3 - Winter Olympics\n\n\n\nDOW\n\nWinter Olympics\n\nArmenia\n\n\n\nNational Pride during the Winter Olympics\n\n\n\n\n\nFeb 19, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 2 - The Big 5 Test\n\n\n\nDOW\n\nPersonality Tests\n\n\n\nA close look into the Big 5 Personality Test\n\n\n\n\n\nFeb 13, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 2 - The Big 5 Test\n\n\n\nDOW\n\nPersonality Tests\n\n\n\nA close look into the Big 5 Personality Test\n\n\n\n\n\nFeb 13, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 1 - The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\nCake and Candles on a Rainy Day…\n\n\n\n\n\nFeb 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nMy first post\n\n\n\nlearning\n\ndata stories\n\n\n\nThe Beginning our of Data-Driven Storytelling\n\n\n\n\n\nJan 24, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
+    "text": "Dataset of the Week 4 - Crash Data\n\n\n\nDOW\n\nCrash Data\n\nPhiladelphia\n\n\n\nNational Pride during the Winter Olympics\n\n\n\n\n\nMar 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 3 - Winter Olympics\n\n\n\nDOW\n\nWinter Olympics\n\nArmenia\n\n\n\nNational Pride during the Winter Olympics\n\n\n\n\n\nFeb 19, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 2 - The Big 5 Test\n\n\n\nDOW\n\nPersonality Tests\n\n\n\nA close look into the Big 5 Personality Test\n\n\n\n\n\nFeb 13, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 1 - The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\nCake and Candles on a Rainy Day…\n\n\n\n\n\nFeb 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nMy first post\n\n\n\nlearning\n\ndata stories\n\n\n\nThe Beginning our of Data-Driven Storytelling\n\n\n\n\n\nJan 24, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/002_DOW1_Weather/DOW1.html",
@@ -175,43 +133,43 @@
     "text": "Weekends often feel riskier on the road — later nights, nightlife, and less predictable driving patterns.\nBut Philadelphia also has extremely heavy weekday commuting traffic. I was curious whether the data would reflect that.\nSo I looked at how crashes are distributed across the days of the week.\n\nday_labels = {\n    1: \"Sunday\",\n    2: \"Monday\",\n    3: \"Tuesday\",\n    4: \"Wednesday\",\n    5: \"Thursday\",\n    6: \"Friday\",\n    7: \"Saturday\"\n}\n\ncrashes_by_day = phl.groupby(\"DAY_OF_WEEK\").size().rename(index=day_labels)\n\ncrashes_by_day.plot(kind=\"bar\")\n\nplt.title(\"Crashes by Day of Week in Philadelphia\")\nplt.xlabel(\"Day of Week\")\nplt.ylabel(\"Number of Crashes\")\n\nplt.xticks(rotation=45)\n\nplt.show()"
   },
   {
-    "objectID": "posts/003_DOW2_Big5/Untitled-Copy1.html",
-    "href": "posts/003_DOW2_Big5/Untitled-Copy1.html",
+    "objectID": "posts/003_DOW2_Big5/dow2.html",
+    "href": "posts/003_DOW2_Big5/dow2.html",
     "title": "Dataset of the Week 2 - The Big 5 Test",
     "section": "",
     "text": "We took the Big 5 Personality Test in our class and these are the results I got!"
   },
   {
-    "objectID": "posts/003_DOW2_Big5/Untitled-Copy1.html#the-big-5-personality-test",
-    "href": "posts/003_DOW2_Big5/Untitled-Copy1.html#the-big-5-personality-test",
+    "objectID": "posts/003_DOW2_Big5/dow2.html#the-big-5-personality-test",
+    "href": "posts/003_DOW2_Big5/dow2.html#the-big-5-personality-test",
     "title": "Dataset of the Week 2 - The Big 5 Test",
     "section": "",
     "text": "We took the Big 5 Personality Test in our class and these are the results I got!"
   },
   {
-    "objectID": "posts/003_DOW2_Big5/Untitled-Copy1.html#initial-motivation",
-    "href": "posts/003_DOW2_Big5/Untitled-Copy1.html#initial-motivation",
+    "objectID": "posts/003_DOW2_Big5/dow2.html#initial-motivation",
+    "href": "posts/003_DOW2_Big5/dow2.html#initial-motivation",
     "title": "Dataset of the Week 2 - The Big 5 Test",
     "section": "Initial motivation",
     "text": "Initial motivation\n\nWhen I received my own results, I was surprised. My agreeableness score was very high, which felt accurate, but my emotional stability (the inverse of neuroticism) was much more average than I expected. I had always assumed that being more agreeable would naturally mean being emotionally calmer.\n\n\nThat assumption made me curious about whether this relationship showed up in other people’s results as well, or if it was just something I noticed in myself.\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Load datasets\nclass_big5_df = pd.read_csv(\"class_big5_data.csv\", sep=\"\\t\")\n\n# Fix delimiter if needed\nif len(class_big5_df.columns) == 1:\n    class_big5_df = pd.read_csv(\"class_big5_data.csv\")\n\nbig5_df = pd.read_csv(\"openpsych_data.csv\", sep=\"\\t\")\n\n\nclass_scored_df = class_big5_df.copy()\n\n# Class trait order\nroman_map = {\n    \"I\": \"O\",\n    \"II\": \"C\",\n    \"III\": \"E\",\n    \"IV\": \"A\",\n    \"V\": \"ES\"  # Emotional Stability\n}\n\nfor r, t in roman_map.items():\n    class_scored_df[t] = pd.to_numeric(class_scored_df[r], errors=\"coerce\")\n\n# Convert Emotional Stability → Neuroticism\nes = class_scored_df[\"ES\"]\nclass_scored_df[\"N\"] = (es.max() + es.min()) - es\n\nclass_scored_df[[\"A\", \"N\"]].head()\n\n\n\n\n\n\n\n\nA\nN\n\n\n\n\n0\n97.0\n1.0\n\n\n1\n93.0\n38.0\n\n\n2\n89.0\n14.0\n\n\n3\n96.0\n63.0\n\n\n4\n76.0\n9.0\n\n\n\n\n\n\n\nI started by looking at our class data to see whether the relationship I noticed in my own scores appeared among my classmates as well.\nIf high agreeableness truly leads to lower neuroticism, I would expect to see a clear negative relationship between the two traits.\n\nplt.figure()\nplt.scatter(class_scored_df[\"A\"], class_scored_df[\"N\"])\nplt.xlabel(\"Agreeableness\")\nplt.ylabel(\"Neuroticism\")\nplt.title(\"Class Data: Agreeableness vs Neuroticism\")\nplt.show()\n\nclass_corr = class_scored_df[\"A\"].corr(class_scored_df[\"N\"])\nclass_corr\n\n\n\n\n\n\n\n\nnp.float64(-0.13316302756818466)\n\n\nWithin our class, the relationship between agreeableness and neuroticism is not especially strong. While some students with high agreeableness do score lower in neuroticism, many do not.\nThis suggests that my experience was not unique, but it also raised the question of whether this pattern holds in a much larger dataset.\n\ndef score_trait(df, prefix):\n    cols = [f\"{prefix}{i}\" for i in range(1, 11)]\n    return df[cols].apply(pd.to_numeric, errors=\"coerce\").mean(axis=1)\n\nbig5_scored_df = big5_df.copy()\nbig5_scored_df[\"A\"] = score_trait(big5_scored_df, \"A\")\nbig5_scored_df[\"N\"] = score_trait(big5_scored_df, \"N\")"
   },
   {
-    "objectID": "posts/003_DOW2_Big5/Untitled-Copy1.html#testing-the-idea-in-a-larger-dataset",
-    "href": "posts/003_DOW2_Big5/Untitled-Copy1.html#testing-the-idea-in-a-larger-dataset",
+    "objectID": "posts/003_DOW2_Big5/dow2.html#testing-the-idea-in-a-larger-dataset",
+    "href": "posts/003_DOW2_Big5/dow2.html#testing-the-idea-in-a-larger-dataset",
     "title": "Dataset of the Week 2 - The Big 5 Test",
     "section": "Testing the idea in a larger dataset",
     "text": "Testing the idea in a larger dataset\nTo explore this further, I looked at the OpenPsych Big Five dataset, which includes responses from nearly 20,000 people. With a dataset this large, any strong relationship between agreeableness and neuroticism should be easier to detect.\nHowever, the results were similar to what I saw in our class. Even at scale, the correlation between agreeableness and neuroticism was weak. Many people who scored high in agreeableness still reported relatively high levels of neuroticism.\nThis suggests that being more agreeable does not consistently correspond to being less emotionally reactive or anxious.\n\nsample = big5_scored_df[[\"A\", \"N\"]].dropna().sample(2500, random_state=42)\n\nplt.figure()\nplt.scatter(sample[\"A\"], sample[\"N\"], alpha=0.3)\nplt.xlabel(\"Agreeableness\")\nplt.ylabel(\"Neuroticism\")\nplt.title(\"OpenPsych Data: Agreeableness vs Neuroticism\")\nplt.show()\n\nfull_corr = big5_scored_df[\"A\"].corr(big5_scored_df[\"N\"])\nfull_corr\n\n\n\n\n\n\n\n\nnp.float64(0.18144744927195994)\n\n\n\nEven with a much larger sample size, the relationship between agreeableness and neuroticism remains weak. High agreeableness does not consistently predict low neuroticism.\n\n\nThis challenges the assumption that being more cooperative or empathetic automatically translates into emotional stability."
   },
   {
-    "objectID": "posts/003_DOW2_Big5/Untitled-Copy1.html#narrowing-the-analysis-by-gender",
-    "href": "posts/003_DOW2_Big5/Untitled-Copy1.html#narrowing-the-analysis-by-gender",
+    "objectID": "posts/003_DOW2_Big5/dow2.html#narrowing-the-analysis-by-gender",
+    "href": "posts/003_DOW2_Big5/dow2.html#narrowing-the-analysis-by-gender",
     "title": "Dataset of the Week 2 - The Big 5 Test",
     "section": "Narrowing the analysis by gender",
     "text": "Narrowing the analysis by gender\nI then narrowed the analysis by gender to see if the relationship between agreeableness and neuroticism differed across groups. While average levels of each trait varied slightly, the overall relationship remained weak regardless of gender.\nThis indicates that the lack of a strong correlation is not driven by gender differences in the dataset.\n\ngender_map = {1: \"male\", 2: \"female\", 3: \"other\"}\nbig5_scored_df[\"gender_cat\"] = big5_scored_df[\"gender\"].map(gender_map)\n\nbig5_scored_df.groupby(\"gender_cat\")[[\"A\", \"N\"]].corr().unstack().iloc[:, 1]\n\ngender_cat\nfemale    0.142175\nmale      0.219107\nother     0.310406\nName: (A, N), dtype: float64"
   },
   {
-    "objectID": "posts/003_DOW2_Big5/Untitled-Copy1.html#conclusion",
-    "href": "posts/003_DOW2_Big5/Untitled-Copy1.html#conclusion",
+    "objectID": "posts/003_DOW2_Big5/dow2.html#conclusion",
+    "href": "posts/003_DOW2_Big5/dow2.html#conclusion",
     "title": "Dataset of the Week 2 - The Big 5 Test",
     "section": "Conclusion",
     "text": "Conclusion\n\nBased on my own results, our class data, and a much larger dataset, there is little evidence that high agreeableness leads to low neuroticism. While agreeableness is often seen as a positive or socially desirable trait, it does not appear to offer consistent protection against emotional instability.\n\n\nThis analysis challenged an assumption I didn’t realize I had, and it was a reminder that personality traits describe tendencies rather than outcomes. Even traits that seem intuitively connected do not always behave that way in real data."
