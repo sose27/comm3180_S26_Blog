@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sose Hovannisian">
-<meta name="dcterms.date" content="2026-02-13">
-<meta name="description" content="A close look into the Big 5 Personality Test">
+<meta name="dcterms.date" content="2026-03-06">
+<meta name="description" content="National Pride during the Winter Olympics">
 
-<title>Dataset of the Week 2 - The Big 5 Test – Sose’s Data Stories</title>
+<title>Dataset of the Week 4 - Crash Data – Sose’s Data Stories</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,7 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -106,9 +106,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -151,15 +148,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Dataset of the Week 2 - The Big 5 Test</h1>
+      <h1 class="title">Dataset of the Week 4 - Crash Data</h1>
                   <div>
         <div class="description">
-          A close look into the Big 5 Personality Test
+          National Pride during the Winter Olympics
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">DOW</div>
-                <div class="quarto-category">Personality Tests</div>
+                <div class="quarto-category">Crash Data</div>
+                <div class="quarto-category">Philadelphia</div>
               </div>
                   </div>
   </div>
@@ -177,7 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 13, 2026</p>
+        <p class="date">March 6, 2026</p>
       </div>
     </div>
     
@@ -196,197 +194,202 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="the-big-5-personality-test" class="level2">
-<h2 class="anchored" data-anchor-id="the-big-5-personality-test">The Big 5 Personality Test</h2>
-<section id="the-big-five-personality-test-or-five-factor-model-ffm-is-a-widely-accepted-evidence-based-psychological-assessment-that-measures-five-core-dimensions-of-human-personality-openness-conscientiousness-extraversion-agreeableness-and-neuroticism-ocean.-it-uses-self-report-questionnaires-to-evaluate-traits-on-a-spectrum-commonly-used-for-hiring-counseling-and-self-discovery." class="level4">
-<h4 class="anchored" data-anchor-id="the-big-five-personality-test-or-five-factor-model-ffm-is-a-widely-accepted-evidence-based-psychological-assessment-that-measures-five-core-dimensions-of-human-personality-openness-conscientiousness-extraversion-agreeableness-and-neuroticism-ocean.-it-uses-self-report-questionnaires-to-evaluate-traits-on-a-spectrum-commonly-used-for-hiring-counseling-and-self-discovery.">The Big Five personality test, or Five-Factor Model (FFM), is a widely accepted, evidence-based psychological assessment that measures five core dimensions of human personality: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN). It uses self-report questionnaires to evaluate traits on a spectrum, commonly used for hiring, counseling, and self-discovery.</h4>
-<p>We took the Big 5 Personality Test in our class and these are the results I got!</p>
-<p><img src="img/big_5.png" class="img-fluid"></p>
+<section id="are-philadelphias-roads-getting-safer" class="level1">
+<h1>Are Philadelphia’s Roads Getting Safer?</h1>
+<section id="a-look-at-20-years-of-crash-data" class="level3">
+<h3 class="anchored" data-anchor-id="a-look-at-20-years-of-crash-data">A look at 20 years of crash data</h3>
 </section>
+<section id="every-day-thousands-of-people-move-through-philadelphia-by-car-bike-bus-or-on-foot.-most-trips-are-routine-but-sometimes-they-end-in-crashes." class="level3">
+<h3 class="anchored" data-anchor-id="every-day-thousands-of-people-move-through-philadelphia-by-car-bike-bus-or-on-foot.-most-trips-are-routine-but-sometimes-they-end-in-crashes.">Every day thousands of people move through Philadelphia by car, bike, bus, or on foot. Most trips are routine, but sometimes they end in crashes.</h3>
 </section>
-<section id="initial-motivation" class="level2">
-<h2 class="anchored" data-anchor-id="initial-motivation">Initial motivation</h2>
-<section id="when-i-received-my-own-results-i-was-surprised.-my-agreeableness-score-was-very-high-which-felt-accurate-but-my-emotional-stability-the-inverse-of-neuroticism-was-much-more-average-than-i-expected.-i-had-always-assumed-that-being-more-agreeable-would-naturally-mean-being-emotionally-calmer." class="level3">
-<h3 class="anchored" data-anchor-id="when-i-received-my-own-results-i-was-surprised.-my-agreeableness-score-was-very-high-which-felt-accurate-but-my-emotional-stability-the-inverse-of-neuroticism-was-much-more-average-than-i-expected.-i-had-always-assumed-that-being-more-agreeable-would-naturally-mean-being-emotionally-calmer.">When I received my own results, I was surprised. My agreeableness score was very high, which felt accurate, but my emotional stability (the inverse of neuroticism) was much more average than I expected. I had always assumed that being more agreeable would naturally mean being emotionally calmer.</h3>
-</section>
-<section id="that-assumption-made-me-curious-about-whether-this-relationship-showed-up-in-other-peoples-results-as-well-or-if-it-was-just-something-i-noticed-in-myself." class="level3">
-<h3 class="anchored" data-anchor-id="that-assumption-made-me-curious-about-whether-this-relationship-showed-up-in-other-peoples-results-as-well-or-if-it-was-just-something-i-noticed-in-myself.">That assumption made me curious about whether this relationship showed up in other people’s results as well, or if it was just something I noticed in myself.</h3>
-<div id="dbf11728-4c8e-47fb-ba74-58b539c29c33" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<section id="using-penndot-crash-data-from-20052024-i-wanted-to-understand-how-traffic-safety-in-philadelphia-has-changed-over-time.-at-first-glance-the-story-seems-simple-if-crashes-are-declining-the-roads-must-be-getting-safer.-but-the-data-ended-up-telling-a-more-complicated-story." class="level3">
+<h3 class="anchored" data-anchor-id="using-penndot-crash-data-from-20052024-i-wanted-to-understand-how-traffic-safety-in-philadelphia-has-changed-over-time.-at-first-glance-the-story-seems-simple-if-crashes-are-declining-the-roads-must-be-getting-safer.-but-the-data-ended-up-telling-a-more-complicated-story.">Using PennDOT crash data from 2005–2024, I wanted to understand how traffic safety in Philadelphia has changed over time. At first glance the story seems simple: if crashes are declining, the roads must be getting safer. But the data ended up telling a more complicated story.</h3>
+<div id="2eb7f4f0-8923-45c5-a87e-0aaa03b2b1eb" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load datasets</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>class_big5_df <span class="op">=</span> pd.read_csv(<span class="st">"class_big5_data.csv"</span>, sep<span class="op">=</span><span class="st">"</span><span class="ch">\t</span><span class="st">"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Fix delimiter if needed</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(class_big5_df.columns) <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    class_big5_df <span class="op">=</span> pd.read_csv(<span class="st">"class_big5_data.csv"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"figure.figsize"</span>] <span class="op">=</span> (<span class="dv">10</span>,<span class="dv">6</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"PDOT_crash_data_2005_2024.csv"</span>, low_memory<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Philadelphia County FIPS code</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>phl <span class="op">=</span> df[df[<span class="st">"COUNTY"</span>] <span class="op">==</span> <span class="dv">67</span>].copy()</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>big5_df <span class="op">=</span> pd.read_csv(<span class="st">"openpsych_data.csv"</span>, sep<span class="op">=</span><span class="st">"</span><span class="ch">\t</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="f5ffc54e-0578-4c28-933f-64b4de815e93" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>class_scored_df <span class="op">=</span> class_big5_df.copy()</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Class trait order</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>roman_map <span class="op">=</span> {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I"</span>: <span class="st">"O"</span>,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"II"</span>: <span class="st">"C"</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"III"</span>: <span class="st">"E"</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"IV"</span>: <span class="st">"A"</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"V"</span>: <span class="st">"ES"</span>  <span class="co"># Emotional Stability</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r, t <span class="kw">in</span> roman_map.items():</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    class_scored_df[t] <span class="op">=</span> pd.to_numeric(class_scored_df[r], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Emotional Stability → Neuroticism</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>es <span class="op">=</span> class_scored_df[<span class="st">"ES"</span>]</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>class_scored_df[<span class="st">"N"</span>] <span class="op">=</span> (es.<span class="bu">max</span>() <span class="op">+</span> es.<span class="bu">min</span>()) <span class="op">-</span> es</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>class_scored_df[[<span class="st">"A"</span>, <span class="st">"N"</span>]].head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">A</th>
-<th data-quarto-table-cell-role="th">N</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>97.0</td>
-<td>1.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>93.0</td>
-<td>38.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>89.0</td>
-<td>14.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>96.0</td>
-<td>63.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>76.0</td>
-<td>9.0</td>
-</tr>
-</tbody>
-</table>
-
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total rows in dataset:"</span>, <span class="bu">len</span>(df))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Philadelphia crashes:"</span>, <span class="bu">len</span>(phl))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Years covered:"</span>, phl[<span class="st">"CRASH_YEAR"</span>].<span class="bu">min</span>(), <span class="st">"to"</span>, phl[<span class="st">"CRASH_YEAR"</span>].<span class="bu">max</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total rows in dataset: 691069
+Philadelphia crashes: 214596
+Years covered: 2005 to 2024</code></pre>
 </div>
 </div>
-</div>
-<p>I started by looking at our class data to see whether the relationship I noticed in my own scores appeared among my classmates as well.</p>
-<p>If high agreeableness truly leads to lower neuroticism, I would expect to see a clear negative relationship between the two traits.</p>
-<div id="bda61fbe-4704-478f-8725-c492c45de9cd" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.scatter(class_scored_df[<span class="st">"A"</span>], class_scored_df[<span class="st">"N"</span>])</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Agreeableness"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Neuroticism"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Class Data: Agreeableness vs Neuroticism"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>class_corr <span class="op">=</span> class_scored_df[<span class="st">"A"</span>].corr(class_scored_df[<span class="st">"N"</span>])</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>class_corr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="first-question-are-crashes-actually-going-down" class="level2">
+<h2 class="anchored" data-anchor-id="first-question-are-crashes-actually-going-down">First question: are crashes actually going down?</h2>
+<p>If Philadelphia’s roads are getting safer, the most obvious place to look is the number of crashes each year.</p>
+<p>This felt like the simplest question to start with — but I had a feeling it wouldn’t tell the whole story.</p>
+<div id="3df1f60d-e872-4954-8a50-b4e34c25c049" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>crashes_per_year <span class="op">=</span> phl.groupby(<span class="st">"CRASH_YEAR"</span>).size()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>crashes_per_year.plot()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Total Crashes in Philadelphia (2005–2024)"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Number of Crashes"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Untitled_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="dow4_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>np.float64(-0.13316302756818466)</code></pre>
 </div>
-</div>
-<p>Within our class, the relationship between agreeableness and neuroticism is not especially strong. While some students with high agreeableness do score lower in neuroticism, many do not.</p>
-<p>This suggests that my experience was not unique, but it also raised the question of whether this pattern holds in a much larger dataset.</p>
-<div id="ee709377-42d0-49d4-b38e-372f455c617f" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> score_trait(df, prefix):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    cols <span class="op">=</span> [<span class="ss">f"</span><span class="sc">{</span>prefix<span class="sc">}{</span>i<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>)]</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df[cols].<span class="bu">apply</span>(pd.to_numeric, errors<span class="op">=</span><span class="st">"coerce"</span>).mean(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>big5_scored_df <span class="op">=</span> big5_df.copy()</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>big5_scored_df[<span class="st">"A"</span>] <span class="op">=</span> score_trait(big5_scored_df, <span class="st">"A"</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>big5_scored_df[<span class="st">"N"</span>] <span class="op">=</span> score_trait(big5_scored_df, <span class="st">"N"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<p>At first glance this actually looks encouraging. The overall trend suggests that crashes have gradually declined over the past two decades.</p>
+<p>But looking at this chart raised a new question for me.</p>
+<p>If crashes are declining, does that automatically mean the roads are becoming safer?</p>
+<p>Not necessarily. Fewer crashes could still involve serious injuries or deaths. So the next step was to look at crash severity.</p>
 </section>
-</section>
-<section id="testing-the-idea-in-a-larger-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="testing-the-idea-in-a-larger-dataset">Testing the idea in a larger dataset</h2>
-<p>To explore this further, I looked at the OpenPsych Big Five dataset, which includes responses from nearly 20,000 people. With a dataset this large, any strong relationship between agreeableness and neuroticism should be easier to detect.</p>
-<p>However, the results were similar to what I saw in our class. Even at scale, the correlation between agreeableness and neuroticism was weak. Many people who scored high in agreeableness still reported relatively high levels of neuroticism.</p>
-<p>This suggests that being more agreeable does not consistently correspond to being less emotionally reactive or anxious.</p>
-<div id="718ec7f6-a9b0-409a-a11e-25710e467312" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> big5_scored_df[[<span class="st">"A"</span>, <span class="st">"N"</span>]].dropna().sample(<span class="dv">2500</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(sample[<span class="st">"A"</span>], sample[<span class="st">"N"</span>], alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Agreeableness"</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Neuroticism"</span>)</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"OpenPsych Data: Agreeableness vs Neuroticism"</span>)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>full_corr <span class="op">=</span> big5_scored_df[<span class="st">"A"</span>].corr(big5_scored_df[<span class="st">"N"</span>])</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>full_corr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="are-crashes-becoming-less-deadly" class="level2">
+<h2 class="anchored" data-anchor-id="are-crashes-becoming-less-deadly">Are crashes becoming less deadly?</h2>
+<div id="4f84e01e-11e7-4e5b-ba7a-09e610dedda9" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fatalities <span class="op">=</span> phl.groupby(<span class="st">"CRASH_YEAR"</span>)[<span class="st">"FATAL_COUNT"</span>].<span class="bu">sum</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fatalities.plot()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Traffic Fatalities in Philadelphia (2005–2024)"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Fatalities"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Untitled_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="dow4_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="15">
-<pre><code>np.float64(0.18144744927195994)</code></pre>
+</div>
+<p>This is where the story becomes more complicated.</p>
+<p>While crashes generally decline, fatalities fluctuate much more dramatically. The two trends don’t move together as neatly as I expected.</p>
+<p>So the story isn’t just about how many crashes happen. It also depends on when those crashes occur.</p>
+</section>
+<section id="when-do-crashes-happen" class="level2">
+<h2 class="anchored" data-anchor-id="when-do-crashes-happen">When do crashes happen?</h2>
+<p>Cities have daily rhythms: morning commutes, school drop-offs, lunch traffic, evening rush hour, and late-night driving.</p>
+<p>I wanted to see if crash patterns follow those rhythms too.</p>
+<div id="66b6d0dd-b726-4010-9128-1ecca2604996" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>hourly <span class="op">=</span> phl.groupby(<span class="st">"HOUR_OF_DAY"</span>).size()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>hourly.plot(kind<span class="op">=</span><span class="st">"bar"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Crashes by Hour of Day"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Hour"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Number of Crashes"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Most dangerous hour:"</span>, hourly.idxmax())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dow4_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<section id="even-with-a-much-larger-sample-size-the-relationship-between-agreeableness-and-neuroticism-remains-weak.-high-agreeableness-does-not-consistently-predict-low-neuroticism." class="level4">
-<h4 class="anchored" data-anchor-id="even-with-a-much-larger-sample-size-the-relationship-between-agreeableness-and-neuroticism-remains-weak.-high-agreeableness-does-not-consistently-predict-low-neuroticism.">Even with a much larger sample size, the relationship between agreeableness and neuroticism remains weak. High agreeableness does not consistently predict low neuroticism.</h4>
-</section>
-<section id="this-challenges-the-assumption-that-being-more-cooperative-or-empathetic-automatically-translates-into-emotional-stability." class="level4">
-<h4 class="anchored" data-anchor-id="this-challenges-the-assumption-that-being-more-cooperative-or-empathetic-automatically-translates-into-emotional-stability.">This challenges the assumption that being more cooperative or empathetic automatically translates into emotional stability.</h4>
-</section>
-</section>
-<section id="narrowing-the-analysis-by-gender" class="level2">
-<h2 class="anchored" data-anchor-id="narrowing-the-analysis-by-gender">Narrowing the analysis by gender</h2>
-<p>I then narrowed the analysis by gender to see if the relationship between agreeableness and neuroticism differed across groups. While average levels of each trait varied slightly, the overall relationship remained weak regardless of gender.</p>
-<p>This indicates that the lack of a strong correlation is not driven by gender differences in the dataset.</p>
-<div id="2975ffe0-46f8-451b-9df5-2c4b148d0078" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gender_map <span class="op">=</span> {<span class="dv">1</span>: <span class="st">"male"</span>, <span class="dv">2</span>: <span class="st">"female"</span>, <span class="dv">3</span>: <span class="st">"other"</span>}</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>big5_scored_df[<span class="st">"gender_cat"</span>] <span class="op">=</span> big5_scored_df[<span class="st">"gender"</span>].<span class="bu">map</span>(gender_map)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>big5_scored_df.groupby(<span class="st">"gender_cat"</span>)[[<span class="st">"A"</span>, <span class="st">"N"</span>]].corr().unstack().iloc[:, <span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<pre><code>gender_cat
-female    0.142175
-male      0.219107
-other     0.310406
-Name: (A, N), dtype: float64</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code>Most dangerous hour: 17.0</code></pre>
 </div>
 </div>
+<section id="rush-hour-clearly-matters.-the-busiest-travel-hours-also-tend-to-produce-the-most-crashes." class="level3">
+<h3 class="anchored" data-anchor-id="rush-hour-clearly-matters.-the-busiest-travel-hours-also-tend-to-produce-the-most-crashes.">Rush hour clearly matters. The busiest travel hours also tend to produce the most crashes.</h3>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<section id="based-on-my-own-results-our-class-data-and-a-much-larger-dataset-there-is-little-evidence-that-high-agreeableness-leads-to-low-neuroticism.-while-agreeableness-is-often-seen-as-a-positive-or-socially-desirable-trait-it-does-not-appear-to-offer-consistent-protection-against-emotional-instability." class="level4">
-<h4 class="anchored" data-anchor-id="based-on-my-own-results-our-class-data-and-a-much-larger-dataset-there-is-little-evidence-that-high-agreeableness-leads-to-low-neuroticism.-while-agreeableness-is-often-seen-as-a-positive-or-socially-desirable-trait-it-does-not-appear-to-offer-consistent-protection-against-emotional-instability.">Based on my own results, our class data, and a much larger dataset, there is little evidence that high agreeableness leads to low neuroticism. While agreeableness is often seen as a positive or socially desirable trait, it does not appear to offer consistent protection against emotional instability.</h4>
+<section id="that-observation-made-me-think-about-who-is-most-exposed-in-these-environments.-drivers-are-protected-by-the-vehicle-around-them-but-pedestrians-and-cyclists-are-not." class="level3">
+<h3 class="anchored" data-anchor-id="that-observation-made-me-think-about-who-is-most-exposed-in-these-environments.-drivers-are-protected-by-the-vehicle-around-them-but-pedestrians-and-cyclists-are-not.">That observation made me think about who is most exposed in these environments. Drivers are protected by the vehicle around them, but pedestrians and cyclists are not.</h3>
 </section>
-<section id="this-analysis-challenged-an-assumption-i-didnt-realize-i-had-and-it-was-a-reminder-that-personality-traits-describe-tendencies-rather-than-outcomes.-even-traits-that-seem-intuitively-connected-do-not-always-behave-that-way-in-real-data." class="level4">
-<h4 class="anchored" data-anchor-id="this-analysis-challenged-an-assumption-i-didnt-realize-i-had-and-it-was-a-reminder-that-personality-traits-describe-tendencies-rather-than-outcomes.-even-traits-that-seem-intuitively-connected-do-not-always-behave-that-way-in-real-data.">This analysis challenged an assumption I didn’t realize I had, and it was a reminder that personality traits describe tendencies rather than outcomes. Even traits that seem intuitively connected do not always behave that way in real data.</h4>
+<section id="who-is-most-vulnerable" class="level3">
+<h3 class="anchored" data-anchor-id="who-is-most-vulnerable">Who is most vulnerable?</h3>
+<div id="4749666e-dfd7-47fe-a8c4-4ec599af5403" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ped <span class="op">=</span> phl.groupby(<span class="st">"CRASH_YEAR"</span>)[<span class="st">"PED_COUNT"</span>].<span class="bu">sum</span>()</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>bike <span class="op">=</span> phl.groupby(<span class="st">"CRASH_YEAR"</span>)[<span class="st">"BICYCLE_COUNT"</span>].<span class="bu">sum</span>()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.plot(ped.index, ped.values, label<span class="op">=</span><span class="st">"Pedestrians"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.plot(bike.index, bike.values, label<span class="op">=</span><span class="st">"Cyclists"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Pedestrian and Bicycle Involvement in Crashes"</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"People involved"</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dow4_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="these-numbers-are-smaller-than-total-crash-counts-but-they-matter-precisely-because-they-represent-people-with-far-less-protection." class="level4">
+<h4 class="anchored" data-anchor-id="these-numbers-are-smaller-than-total-crash-counts-but-they-matter-precisely-because-they-represent-people-with-far-less-protection.">These numbers are smaller than total crash counts, but they matter precisely because they represent people with far less protection.</h4>
+</section>
+<section id="at-this-point-another-question-started-to-feel-important-are-crashes-spread-evenly-across-the-city-or-do-they-cluster-in-certain-places" class="level4">
+<h4 class="anchored" data-anchor-id="at-this-point-another-question-started-to-feel-important-are-crashes-spread-evenly-across-the-city-or-do-they-cluster-in-certain-places">At this point another question started to feel important: are crashes spread evenly across the city, or do they cluster in certain places?</h4>
+</section>
+</section>
+</section>
+<section id="are-weekends-actually-more-dangerous" class="level2">
+<h2 class="anchored" data-anchor-id="are-weekends-actually-more-dangerous">Are weekends actually more dangerous?</h2>
+<p>Weekends often feel riskier on the road — later nights, nightlife, and less predictable driving patterns.</p>
+<p>But Philadelphia also has extremely heavy weekday commuting traffic. I was curious whether the data would reflect that.</p>
+<p>So I looked at how crashes are distributed across the days of the week.</p>
+<div id="c4349eb1-760c-4145-a2ec-c4cf5cdde58c" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>day_labels <span class="op">=</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>: <span class="st">"Sunday"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span>: <span class="st">"Monday"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span>: <span class="st">"Tuesday"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">4</span>: <span class="st">"Wednesday"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="dv">5</span>: <span class="st">"Thursday"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="dv">6</span>: <span class="st">"Friday"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="dv">7</span>: <span class="st">"Saturday"</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>crashes_by_day <span class="op">=</span> phl.groupby(<span class="st">"DAY_OF_WEEK"</span>).size().rename(index<span class="op">=</span>day_labels)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>crashes_by_day.plot(kind<span class="op">=</span><span class="st">"bar"</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Crashes by Day of Week in Philadelphia"</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Day of Week"</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Number of Crashes"</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dow4_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="this-result-pushes-against-some-assumptions.-while-weekends-might-feel-more-chaotic-on-the-road-weekday-commuting-patterns-create-a-huge-amount-of-traffic-volume." class="level3">
+<h3 class="anchored" data-anchor-id="this-result-pushes-against-some-assumptions.-while-weekends-might-feel-more-chaotic-on-the-road-weekday-commuting-patterns-create-a-huge-amount-of-traffic-volume.">This result pushes against some assumptions. While weekends might feel more chaotic on the road, weekday commuting patterns create a huge amount of traffic volume.</h3>
+</section>
+<section id="in-a-dense-city-like-philadelphia-the-daily-rhythm-of-work-school-and-commuting-appears-to-play-a-major-role-in-when-crashes-occur." class="level3">
+<h3 class="anchored" data-anchor-id="in-a-dense-city-like-philadelphia-the-daily-rhythm-of-work-school-and-commuting-appears-to-play-a-major-role-in-when-crashes-occur.">In a dense city like Philadelphia, the daily rhythm of work, school, and commuting appears to play a major role in when crashes occur.</h3>
+</section>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<section id="looking-at-two-decades-of-crash-data-reveals-a-story-that-is-both-encouraging-and-complicated." class="level4">
+<h4 class="anchored" data-anchor-id="looking-at-two-decades-of-crash-data-reveals-a-story-that-is-both-encouraging-and-complicated.">Looking at two decades of crash data reveals a story that is both encouraging and complicated.</h4>
+</section>
+<section id="total-crashes-in-philadelphia-appear-to-have-declined-over-time-suggesting-improvements-in-vehicle-safety-infrastructure-or-driving-behavior.-but-the-data-also-shows-that-risk-is-not-evenly-distributed.-certain-hours-of-the-day-certain-times-of-the-year-and-certain-road-users-face-greater-danger." class="level4">
+<h4 class="anchored" data-anchor-id="total-crashes-in-philadelphia-appear-to-have-declined-over-time-suggesting-improvements-in-vehicle-safety-infrastructure-or-driving-behavior.-but-the-data-also-shows-that-risk-is-not-evenly-distributed.-certain-hours-of-the-day-certain-times-of-the-year-and-certain-road-users-face-greater-danger.">Total crashes in Philadelphia appear to have declined over time, suggesting improvements in vehicle safety, infrastructure, or driving behavior. But the data also shows that risk is not evenly distributed. Certain hours of the day, certain times of the year, and certain road users face greater danger.</h4>
+</section>
+<section id="what-surprised-me-most-is-how-the-story-changes-depending-on-the-question-asked.-looking-only-at-total-crashes-suggests-progress-but-examining-severity-timing-and-vulnerable-road-users-reveals-a-much-more-complex-picture-of-traffic-safety-in-the-city." class="level4">
+<h4 class="anchored" data-anchor-id="what-surprised-me-most-is-how-the-story-changes-depending-on-the-question-asked.-looking-only-at-total-crashes-suggests-progress-but-examining-severity-timing-and-vulnerable-road-users-reveals-a-much-more-complex-picture-of-traffic-safety-in-the-city.">What surprised me most is how the story changes depending on the question asked. Looking only at total crashes suggests progress, but examining severity, timing, and vulnerable road users reveals a much more complex picture of traffic safety in the city.</h4>
 
 
+</section>
 </section>
 </section>
 
