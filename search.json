@@ -28,43 +28,43 @@
     "text": "Start to picture it!"
   },
   {
-    "objectID": "posts/006_DOW5_shooting/Untitled.html#the-first-story-some-districts-clearly-stand-out",
-    "href": "posts/006_DOW5_shooting/Untitled.html#the-first-story-some-districts-clearly-stand-out",
+    "objectID": "posts/006_DOW5_shooting/Dow5.html#the-first-story-some-districts-clearly-stand-out",
+    "href": "posts/006_DOW5_shooting/Dow5.html#the-first-story-some-districts-clearly-stand-out",
     "title": "Dataset of the Week 5 - Gun Violence in Philly",
     "section": "The First Story: Some Districts Clearly Stand Out",
     "text": "The First Story: Some Districts Clearly Stand Out\n\nAt first glance, the data seems to tell a very straightforward story. Some police districts report far more shootings than others. If we count incidents by district, the gaps are immediately visible.\n\ndistrict_counts = df['dist'].value_counts().sort_values()\n\nplt.figure(figsize=(9, 6))\ndistrict_counts.plot(kind='barh')\nplt.title('Shootings by Police District')\nplt.xlabel('Number of Shootings')\nplt.ylabel('Police District')\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\n\nThis is the kind of chart that encourages a quick conclusion. A few districts appear to dominate, and it becomes tempting to reduce the story of gun violence in Philadelphia to a ranking.\n\nBut this is also exactly where things get a little slippery.\n\nRaw counts are useful, but they can flatten the story. They show volume, but not always distribution in a way that helps us think more carefully."
   },
   {
-    "objectID": "posts/006_DOW5_shooting/Untitled.html#the-twist-totals-are-not-the-whole-story",
-    "href": "posts/006_DOW5_shooting/Untitled.html#the-twist-totals-are-not-the-whole-story",
+    "objectID": "posts/006_DOW5_shooting/Dow5.html#the-twist-totals-are-not-the-whole-story",
+    "href": "posts/006_DOW5_shooting/Dow5.html#the-twist-totals-are-not-the-whole-story",
     "title": "Dataset of the Week 5 - Gun Violence in Philly",
     "section": "The Twist: Totals Are Not the Whole Story",
     "text": "The Twist: Totals Are Not the Whole Story\n\nTo push the question a little further, I looked at each district’s share of total shootings instead of just the raw count.\n\nThis may sound like a small shift, but it changes the way the problem looks.\n\ndistrict_sorted = df['dist'].value_counts(normalize=True).sort_values(ascending=False)\n\ncumulative = district_sorted.cumsum()\n\nplt.figure(figsize=(8,5))\ncumulative.reset_index(drop=True).plot()\nplt.title('Cumulative Share of Shootings by District')\nplt.xlabel('District Rank')\nplt.ylabel('Cumulative Share')\nplt.ylim(0,1)\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\nLooking at the cumulative distribution makes the pattern even clearer. The curve rises quickly at first, showing that a relatively small number of districts account for a large share of shootings.\nAfter that, the line begins to flatten, meaning that the remaining districts still contribute—but more gradually.\nThis reinforces an important point: gun violence in Philadelphia is concentrated, but not isolated. A few areas carry a disproportionate share, yet the issue remains spread across the city as a whole.\nIn other words, there isn’t a single “worst” place—there’s a pattern of concentration layered onto a broader, citywide problem.\n\n\nAt first glance, switching from raw counts to proportions doesn’t seem to change much—the same districts still appear at the top.\nBut this is also where interpretation gets tricky.\nThese proportions show each district’s share of total shootings—not how dangerous a district is relative to its size or population. A district with a larger share may simply have more incidents overall, not necessarily a higher rate of violence per resident.\nIn that sense, the chart is both useful and limited. It helps us understand how shootings are distributed across the city, but it doesn’t fully explain risk.\nThis is a reminder that even when data is technically correct, it can still be easy to misinterpret without the right context."
   },
   {
-    "objectID": "posts/006_DOW5_shooting/Untitled.html#violence-over-time-less-random-than-it-seems",
-    "href": "posts/006_DOW5_shooting/Untitled.html#violence-over-time-less-random-than-it-seems",
+    "objectID": "posts/006_DOW5_shooting/Dow5.html#violence-over-time-less-random-than-it-seems",
+    "href": "posts/006_DOW5_shooting/Dow5.html#violence-over-time-less-random-than-it-seems",
     "title": "Dataset of the Week 5 - Gun Violence in Philly",
     "section": "Violence Over Time: Less Random Than It Seems",
     "text": "Violence Over Time: Less Random Than It Seems\nIt is easy to think of shootings as isolated incidents that happen unpredictably. But time adds another dimension to the story.\nWhen I grouped the data by month, the pattern became much less random than I expected.\n\ndf['date_'] = pd.to_datetime(df['date_'])\nmonthly_shootings = df.set_index('date_').resample('ME').size()\n\nplt.figure(figsize=(11, 6))\nmonthly_shootings.plot()\nplt.title('Shootings Over Time in Philadelphia')\nplt.xlabel('Month')\nplt.ylabel('Number of Shootings')\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nRather than randomness, we see fluctuation. Some periods spike, others dip.\nEven without explaining why, this already changes the story. Violence is not evenly spread across time—it has a rhythm.\n\nSo far, the story has focused on where shootings happen.\nBut location is only one part of the picture.\nTo understand whether these incidents are actually random or patterned, we also need to look at when they occur."
   },
   {
-    "objectID": "posts/006_DOW5_shooting/Untitled.html#a-closer-look-time-of-day",
-    "href": "posts/006_DOW5_shooting/Untitled.html#a-closer-look-time-of-day",
+    "objectID": "posts/006_DOW5_shooting/Dow5.html#a-closer-look-time-of-day",
+    "href": "posts/006_DOW5_shooting/Dow5.html#a-closer-look-time-of-day",
     "title": "Dataset of the Week 5 - Gun Violence in Philly",
     "section": "A Closer Look: Time of Day",
     "text": "A Closer Look: Time of Day\nIf shootings were completely random, we would expect them to be spread fairly evenly throughout the day.\nBut when I broke the data down by hour, a very different pattern showed up.\nInstead of randomness, shootings clearly cluster at specific times. The early morning hours are relatively low, but incidents steadily increase throughout the day, peaking in the late evening and nighttime.\nThis shift is striking. What initially feels like a series of isolated, unpredictable events actually follows a consistent daily rhythm.\nIn other words, the timing of violence isn’t random—it’s structured. And once we look for that structure, it becomes impossible to ignore.\nThis also raises a bigger question: if violence follows patterns this clearly, what factors might be driving them?\n\ndf['datetime'] = pd.to_datetime(\n    df['date_'].astype(str) + ' ' + df['time'].astype(str),\n    format='mixed',\n    errors='coerce'\n)\n\n\nhour_counts = df['hour'].value_counts().sort_index()\n\nplt.figure(figsize=(10, 5))\nhour_counts.plot(kind='bar')\nplt.title('Shootings by Hour of Day')\nplt.xlabel('Hour')\nplt.ylabel('Number of Shootings')\nplt.tight_layout()\nplt.show()"
   },
   {
-    "objectID": "posts/006_DOW5_shooting/Untitled.html#what-this-means-data-needs-context",
-    "href": "posts/006_DOW5_shooting/Untitled.html#what-this-means-data-needs-context",
+    "objectID": "posts/006_DOW5_shooting/Dow5.html#what-this-means-data-needs-context",
+    "href": "posts/006_DOW5_shooting/Dow5.html#what-this-means-data-needs-context",
     "title": "Dataset of the Week 5 - Gun Violence in Philly",
     "section": "What This Means: Data Needs Context",
     "text": "What This Means: Data Needs Context\n\nLooking at this data more closely makes one thing clear: the way we measure data shapes the story we tell.\n\n\nAt first glance, totals and rankings make the problem seem straightforward. But once we shift to proportions or examine patterns over time, that simplicity disappears.\n\n\nShootings aren’t evenly distributed across space or time—they follow patterns. And those patterns only become visible when we move beyond surface-level numbers.\n\n\nWithout that context, even accurate data can lead to misleading conclusions."
   },
   {
-    "objectID": "posts/006_DOW5_shooting/Untitled.html#conclusion",
-    "href": "posts/006_DOW5_shooting/Untitled.html#conclusion",
+    "objectID": "posts/006_DOW5_shooting/Dow5.html#conclusion",
+    "href": "posts/006_DOW5_shooting/Dow5.html#conclusion",
     "title": "Dataset of the Week 5 - Gun Violence in Philly",
     "section": "Conclusion",
     "text": "Conclusion\nThis analysis doesn’t answer every question about gun violence in Philadelphia, but it does change how we should interpret the data.\nInstead of asking only where shootings happen most, it’s just as important to ask how they are distributed and when they occur.\nWhat initially looks like a simple set of numbers becomes a much more layered story when we shift perspective.\nData doesn’t just reflect reality—it shapes how we understand it."
