@@ -11,7 +11,7 @@ website:
      
 format:
   html:
-    theme: cyborg
+    theme: midnight
     css: styles.css
 
 execute:
