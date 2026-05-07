@@ -210,8 +210,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="google-trends">Google Trends</h3>
 <p>I used Google Trends data for the search term:</p>
 <p>“Armenian genocide”</p>
-<p>Google Trends reports data on a scale from 0 to 100, where 100 represents the highest level of search interest within the selected time period. This means the data captures changes in attention over time rather than total search volume.</p>
-<p>Instead of using a single multi-year dataset, I worked with yearly exports that were combined together. This approach avoids distortions from scaling and allows for clearer comparisons across years.</p>
+<p>Google Trends reports data on a scale from 0 to 100, where 100 represents the highest level of search interest within the selected time period. This means the data captures changes in attention over time rather than total search volume. One challenge when working with Google Trends is that the data is normalized within the selected time range. If multiple years are pulled together at once, smaller spikes can become compressed relative to the largest peak.</p>
+<p>Instead of using a single multi-year dataset, I worked with yearly exports that were combined together. To address this, I collected Google Trends data separately for each year and then combined the results. This makes it easier to compare yearly patterns and observe differences in the magnitude of spikes over time.</p>
 </section>
 </section>
 <section id="twitter-data" class="level2">
@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This dataset comes from a historical Twitter archive that represents about 1% of all tweets. While not complete, it provides a useful sample of how people publicly engage with the topic over time.</p>
 <section id="methods" class="level3">
 <h3 class="anchored" data-anchor-id="methods">Methods</h3>
-<div id="a20546cf-b688-4ce0-ad1d-8cc46e491805" class="cell" data-execution_count="5">
+<div id="a20546cf-b688-4ce0-ad1d-8cc46e491805" class="cell" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -231,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'year'</span>] <span class="op">=</span> df[<span class="st">'date'</span>].dt.year</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>To understand how attention changes within each year, I plotted search interest separately for every year.</p>
-<div id="f0c395c3-2624-4a8c-ba69-7bf5d4e5344e" class="cell" data-execution_count="6">
+<div id="f0c395c3-2624-4a8c-ba69-7bf5d4e5344e" class="cell" data-execution_count="33">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">sorted</span>(df[<span class="st">'year'</span>].unique()):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    subset <span class="op">=</span> df[df[<span class="st">'year'</span>] <span class="op">==</span> year]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    plt.plot(subset[<span class="st">'date'</span>], subset[<span class="st">'Armenian genocide'</span>], label<span class="op">=</span>year)</span>
@@ -250,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Next, I processed the Twitter data by grouping tweets by date and counting how many occurred each day.</p>
-<div id="152fa7b9-81f5-4fa8-8f7a-468fcf90851f" class="cell" data-execution_count="21">
+<div id="152fa7b9-81f5-4fa8-8f7a-468fcf90851f" class="cell" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>twitter_df <span class="op">=</span> pd.read_csv(<span class="st">'data/twitter_sample_#1915neveragain.csv'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>twitter_df[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(twitter_df[<span class="st">'created_at'</span>]).dt.date</span>
@@ -260,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   twitter_df['date'] = pd.to_datetime(twitter_df['created_at']).dt.date</code></pre>
 </div>
 </div>
-<div id="5f94f132-9454-473b-931a-3167ad66bc40" class="cell" data-execution_count="22">
+<div id="5f94f132-9454-473b-931a-3167ad66bc40" class="cell" data-execution_count="35">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>daily_counts.plot()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Daily Tweet Counts for #1915neveragain'</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Date'</span>)</span>

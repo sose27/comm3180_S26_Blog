@@ -109,7 +109,7 @@
     "href": "posts/007_DOW6/DOW6.html#data",
     "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
     "section": "Data",
-    "text": "Data\n\nGoogle Trends\nI used Google Trends data for the search term:\n“Armenian genocide”\nGoogle Trends reports data on a scale from 0 to 100, where 100 represents the highest level of search interest within the selected time period. This means the data captures changes in attention over time rather than total search volume.\nInstead of using a single multi-year dataset, I worked with yearly exports that were combined together. This approach avoids distortions from scaling and allows for clearer comparisons across years."
+    "text": "Data\n\nGoogle Trends\nI used Google Trends data for the search term:\n“Armenian genocide”\nGoogle Trends reports data on a scale from 0 to 100, where 100 represents the highest level of search interest within the selected time period. This means the data captures changes in attention over time rather than total search volume. One challenge when working with Google Trends is that the data is normalized within the selected time range. If multiple years are pulled together at once, smaller spikes can become compressed relative to the largest peak.\nInstead of using a single multi-year dataset, I worked with yearly exports that were combined together. To address this, I collected Google Trends data separately for each year and then combined the results. This makes it easier to compare yearly patterns and observe differences in the magnitude of spikes over time."
   },
   {
     "objectID": "posts/007_DOW6/DOW6.html#twitter-data",
