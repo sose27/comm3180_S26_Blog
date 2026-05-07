@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Turning Data into Stories",
     "section": "",
-    "text": "Dataset of the Week 6 - Armenian Genocide Search Data Trends\n\n\n\nDOW\n\nArmenia\n\nData Trends\n\n\n\nDo spikes in search interest about the Armenian Genocide align with spikes in public conversation on Twitter around April 24?\n\n\n\n\n\nMay 4, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 5 - Gun Violence in Philly\n\n\n\nDOW\n\nPhiladelphia\n\nShootings\n\n\n\nWhat the Data Gets Wrong About Gun Violence in Philadelphia\n\n\n\n\n\nMar 21, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 4 - Crash Data\n\n\n\nDOW\n\nCrash Data\n\nPhiladelphia\n\n\n\nAre Philadelphia’s Roads Getting Safer?\n\n\n\n\n\nMar 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 3 - Winter Olympics\n\n\n\nDOW\n\nWinter Olympics\n\nArmenia\n\n\n\nNational Pride during the Winter Olympics\n\n\n\n\n\nFeb 19, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 2 - The Big 5 Test\n\n\n\nDOW\n\nPersonality Tests\n\n\n\nA close look into the Big 5 Personality Test\n\n\n\n\n\nFeb 13, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 1 - The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\nCake and Candles on a Rainy Day…\n\n\n\n\n\nFeb 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
+    "text": "Dataset of the Week 6 - Armenian Genocide Search Data Trends\n\n\n\nDOW\n\nArmenia\n\nData Trends\n\n\n\nHow does public attention to the Armenian Genocide change over time?\n\n\n\n\n\nMay 4, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 5 - Gun Violence in Philly\n\n\n\nDOW\n\nPhiladelphia\n\nShootings\n\n\n\nWhat the Data Gets Wrong About Gun Violence in Philadelphia\n\n\n\n\n\nMar 21, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 4 - Crash Data\n\n\n\nDOW\n\nCrash Data\n\nPhiladelphia\n\n\n\nAre Philadelphia’s Roads Getting Safer?\n\n\n\n\n\nMar 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 3 - Winter Olympics\n\n\n\nDOW\n\nWinter Olympics\n\nArmenia\n\n\n\nNational Pride during the Winter Olympics\n\n\n\n\n\nFeb 19, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 2 - The Big 5 Test\n\n\n\nDOW\n\nPersonality Tests\n\n\n\nA close look into the Big 5 Personality Test\n\n\n\n\n\nFeb 13, 2026\n\n\nSose Hovannisian\n\n\n\n\n\n\n\n\n\n\n\n\nDataset of the Week 1 - The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\nCake and Candles on a Rainy Day…\n\n\n\n\n\nFeb 6, 2026\n\n\nSose Hovannisian\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/003_DOW2_Big5/dow2.html",
@@ -95,35 +95,63 @@
     "href": "posts/007_DOW6/DOW6.html",
     "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
     "section": "",
-    "text": "Google Trends data provides a way to track how public interest in a topic changes over time. In this post, I analyze search interest for the term “Armenian genocide” and compare it to public conversation on Twitter.\nThe main question is: Do spikes in search interest align with spikes in public expression around Armenian Genocide Remembrance Day (April 24)?"
+    "text": "For Armenians, April 24 is a fixed point in time. It marks Armenian Genocide Remembrance Day, a date that is commemorated every year.\nBut I wanted to understand what this moment looks like outside of the community.\nDoes the rest of the world pay attention to the Armenian Genocide consistently, or only at specific moments?\nTo explore this, I used Google Trends data as a proxy for public interest and compared it to social media activity on Twitter."
   },
   {
     "objectID": "posts/007_DOW6/DOW6.html#introduction",
     "href": "posts/007_DOW6/DOW6.html#introduction",
     "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
     "section": "",
-    "text": "Google Trends data provides a way to track how public interest in a topic changes over time. In this post, I analyze search interest for the term “Armenian genocide” and compare it to public conversation on Twitter.\nThe main question is: Do spikes in search interest align with spikes in public expression around Armenian Genocide Remembrance Day (April 24)?"
+    "text": "For Armenians, April 24 is a fixed point in time. It marks Armenian Genocide Remembrance Day, a date that is commemorated every year.\nBut I wanted to understand what this moment looks like outside of the community.\nDoes the rest of the world pay attention to the Armenian Genocide consistently, or only at specific moments?\nTo explore this, I used Google Trends data as a proxy for public interest and compared it to social media activity on Twitter."
   },
   {
-    "objectID": "posts/007_DOW6/DOW6.html#data-sources",
-    "href": "posts/007_DOW6/DOW6.html#data-sources",
+    "objectID": "posts/007_DOW6/DOW6.html#data",
+    "href": "posts/007_DOW6/DOW6.html#data",
     "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
-    "section": "Data Sources",
-    "text": "Data Sources\n\nGoogle Trends\nI used Google Trends to collect weekly search interest data over the past five years for the term:\n“Armenian genocide”\nGoogle Trends reports search interest on a 0–100 scale, where 100 represents the peak level of interest in the selected time period. This means the data reflects relative changes in attention rather than total search volume"
+    "section": "Data",
+    "text": "Data\n\nGoogle Trends\nI used Google Trends data for the search term:\n“Armenian genocide”\nGoogle Trends reports data on a scale from 0 to 100, where 100 represents the highest level of search interest within the selected time period. This means the data captures changes in attention over time rather than total search volume.\nInstead of using a single multi-year dataset, I worked with yearly exports that were combined together. This approach avoids distortions from scaling and allows for clearer comparisons across years."
   },
   {
     "objectID": "posts/007_DOW6/DOW6.html#twitter-data",
     "href": "posts/007_DOW6/DOW6.html#twitter-data",
     "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
     "section": "Twitter Data",
-    "text": "Twitter Data\nTo measure public expression, I used a dataset of tweets containing the hashtag #1915neveragain, which is commonly used in Armenian Genocide remembrance posts.\nThis dataset comes from a historical Twitter archive representing approximately 1% of total tweet volume, and can be aggregated over time to produce daily counts"
+    "text": "Twitter Data\nTo measure public expression, I use a dataset of tweets containing the hashtag:\n#1915neveragain\nThis dataset comes from a historical Twitter archive that represents about 1% of all tweets. While not complete, it provides a useful sample of how people publicly engage with the topic over time.\n\nMethods\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data/gtrends_armenian_genocide.csv')\n\ndf['date'] = pd.to_datetime(df['date'])\ndf['year'] = df['date'].dt.year\n\nTo understand how attention changes within each year, I plotted search interest separately for every year.\n\nfor year in sorted(df['year'].unique()):\n    subset = df[df['year'] == year]\n    plt.plot(subset['date'], subset['Armenian genocide'], label=year)\n\nplt.legend()\nplt.title('Search Interest for \"Armenian genocide\" by Year')\nplt.xlabel('Date')\nplt.ylabel('Search Interest (0–100)')\nplt.show()\n\n\n\n\n\n\n\n\nNext, I processed the Twitter data by grouping tweets by date and counting how many occurred each day.\n\ntwitter_df = pd.read_csv('data/twitter_sample_#1915neveragain.csv')\n\ntwitter_df['date'] = pd.to_datetime(twitter_df['created_at']).dt.date\ndaily_counts = twitter_df.groupby('date').size()\n\n/tmp/ipykernel_886538/2578772940.py:3: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.\n  twitter_df['date'] = pd.to_datetime(twitter_df['created_at']).dt.date\n\n\n\ndaily_counts.plot()\nplt.title('Daily Tweet Counts for #1915neveragain')\nplt.xlabel('Date')\nplt.ylabel('Number of Tweets')\nplt.show()"
   },
   {
-    "objectID": "posts/007_DOW6/DOW6.html#google-trends-1",
-    "href": "posts/007_DOW6/DOW6.html#google-trends-1",
+    "objectID": "posts/007_DOW6/DOW6.html#what-the-data-shows",
+    "href": "posts/007_DOW6/DOW6.html#what-the-data-shows",
     "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
-    "section": "Google trends",
-    "text": "Google trends\nUsing the pytrends library\n\nhelp(pytrends.build_payload)\n\nHelp on method build_payload in module pytrends.request:\n\nbuild_payload(kw_list, cat=0, timeframe='today 5-y', geo='', gprop='') method of pytrends.request.TrendReq instance\n    Create the payload for related queries, interest over time and interest by region\n\n\n\n\nfrom pytrends.request import TrendReq\n\n\ndef get_gtrends_data_for_year(year, kw_list):\n    pytrends = TrendReq()\n\n    \n    pytrends.build_payload(kw_list, timeframe=f'{year}-01-01 {year}-12-31')\n\n    trends = pytrends.interest_over_time()\n\n    return trends\n\n\nkw_list = [\"Armenian genocide\"]\n\n\nag2012 = get_gtrends_data_for_year(2012, kw_list)\n\n\nag2013 = get_gtrends_data_for_year(2013, kw_list)\n\n\nag2014 = get_gtrends_data_for_year(2014, kw_list)\n\n\nimport time\n\n\ngt_data = {}\nfor year in range(2022, 2027):\n    print(f'Getting {year}')\n    time.sleep(3)\n    gt_data[year] = get_gtrends_data_for_year(year, kw_list)\n    \n\nGetting 2022\nGetting 2023\nGetting 2024\nGetting 2025\nGetting 2026\n\n\n\nfor year, gt_df in gt_data.items():\n    gt_df.drop(columns='isPartial').to_csv(f'data/gtrends_armenian_genocide_{year}.csv')\n\n\ntrends.plot()\n\n\n\n\n\n\n\n\n\ntrends\n\n\n\n\n\n\n\n\nArmenian genocide\nisPartial\n\n\ndate\n\n\n\n\n\n\n2017-01-01\n8\nFalse\n\n\n2017-01-08\n7\nFalse\n\n\n2017-01-15\n8\nFalse\n\n\n2017-01-22\n9\nFalse\n\n\n2017-01-29\n10\nFalse\n\n\n...\n...\n...\n\n\n2021-03-28\n5\nFalse\n\n\n2021-04-04\n5\nFalse\n\n\n2021-04-11\n5\nFalse\n\n\n2021-04-18\n59\nFalse\n\n\n2021-04-25\n47\nFalse\n\n\n\n\n226 rows × 2 columns"
+    "section": "What the Data Shows",
+    "text": "What the Data Shows\nThe Google Trends data reveals a very clear pattern.\nFor most of the year, search interest in “Armenian genocide” stays relatively low. But every year, there is a sharp and sudden spike in April.\nThese spikes occur at almost the exact same time each year, aligning with April 24. The pattern is consistent across all years, suggesting that public attention is strongly tied to this specific date.\nWhat stands out even more is how concentrated the attention is. Interest rises quickly, peaks, and then drops off just as fast. This suggests that attention is not sustained over time, but instead triggered by a specific annual event.\nAt the same time, the size of the spikes varies. Some years show much higher peaks than others. For example, 2025 reaches the highest level of search interest, while earlier years show smaller increases. This indicates that certain years generate more attention, likely due to milestone anniversaries or increased media coverage."
+  },
+  {
+    "objectID": "posts/007_DOW6/DOW6.html#comparing-to-twitter",
+    "href": "posts/007_DOW6/DOW6.html#comparing-to-twitter",
+    "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
+    "section": "Comparing to Twitter",
+    "text": "Comparing to Twitter\nThe Twitter data shows a similar but more uneven pattern.\nThere are visible increases in tweet activity around April 24, suggesting that people are not only searching for information, but also expressing themselves publicly during this time.\nHowever, the pattern is much less smooth than Google Trends. This is partly because the dataset is a small sample (1% of tweets) and relies on a specific hashtag. As a result, the data is more sparse and does not capture all forms of conversation.\nThis highlights an important difference:\n\nGoogle Trends captures private information-seeking behavior\nTwitter captures public expression, but only partially"
+  },
+  {
+    "objectID": "posts/007_DOW6/DOW6.html#interpretation",
+    "href": "posts/007_DOW6/DOW6.html#interpretation",
+    "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
+    "section": "Interpretation",
+    "text": "Interpretation\nTaken together, these datasets show that attention to the Armenian Genocide is not constant.\nInstead, it is highly time-bound and event-driven.\nEvery year, April 24 acts as a trigger that brings the topic into public awareness. Outside of this period, interest drops significantly.\nAt the same time, the intensity of attention varies. Larger spikes in certain years suggest that historical milestones and external events can amplify visibility."
+  },
+  {
+    "objectID": "posts/007_DOW6/DOW6.html#limitations",
+    "href": "posts/007_DOW6/DOW6.html#limitations",
+    "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
+    "section": "Limitations",
+    "text": "Limitations\nThere are a few important limitations to consider:\n\nGoogle Trends data is relative, not absolute\nThe Twitter dataset represents only a small sample of tweets\nThe hashtag #1915neveragain does not capture all relevant discussion\nSearch data does not tell us why people are searching"
+  },
+  {
+    "objectID": "posts/007_DOW6/DOW6.html#conclusion",
+    "href": "posts/007_DOW6/DOW6.html#conclusion",
+    "title": "Dataset of the Week 6 - Armenian Genocide Search Data Trends",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis analysis shows that public attention to the Armenian Genocide is not evenly distributed over time.\nInstead, it is concentrated around April 24, when both search activity and public expression increase significantly.\nBy combining Google Trends and Twitter data, we can see how attention emerges in different forms — through both private curiosity and public commemoration — and how that attention is shaped by time, memory, and historical context."
   },
   {
     "objectID": "posts/005_DOW4_Crash_Data/dow4.html",
